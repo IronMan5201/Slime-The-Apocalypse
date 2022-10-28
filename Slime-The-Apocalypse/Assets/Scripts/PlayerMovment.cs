@@ -7,6 +7,9 @@ public class PlayerMovment : MonoBehaviour
     public float speed = 7.5f;
     private Rigidbody2D rb;
     private float direction;
+
+    //Animtorcontroller of the player.
+    public Animator player_move_action;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,6 +24,7 @@ public class PlayerMovment : MonoBehaviour
         if (Input.GetButtonDown("Jump")&&rb.velocity.y==0)
         {
             rb.AddForce(new Vector2(rb.velocity.x, 500f));
+            player_move_action.Play("Jump");
         }
     }
 }
