@@ -5,16 +5,16 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
-    public void PlayGame()
+    public void PlayGame(string sceneName)
     {
         //When play button is clicked on main menu, it loads scene of first level
-        SceneManager.LoadScene(/* Load Scene of first level*/"");
+        SceneManager.LoadScene(sceneName);
     }
 
-    public void LevelSelect()
+    public void LevelSelect(string sceneName)
     {
         //when a button calls this on click, go to level select scene
-        SceneManager.LoadScene(/* Load Scene of level select*/"");
+        SceneManager.LoadScene(sceneName);
     }
 
     public void Quit()
