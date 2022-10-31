@@ -16414,6 +16414,7 @@ GameObject:
   - component: {fileID: 1508365493}
   - component: {fileID: 1508365492}
   - component: {fileID: 1508365491}
+  - component: {fileID: 1508365494}
   m_Layer: 0
   m_Name: Tilemap
   m_TagString: Ground
@@ -18973,3 +18974,24 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!50 &1508365494
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1508365489}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 1
+  m_Constraints: 7
