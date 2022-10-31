@@ -21,10 +21,19 @@ public class PlayerMovment : MonoBehaviour
     {
         direction = Input.GetAxis("Horizontal");
         rb.velocity = new Vector2(speed * direction, rb.velocity.y);
-        if (Input.GetButtonDown("Jump")&&rb.velocity.y==0)
+        if (Input.GetButtonDown("Jump") && rb.velocity.y==0)
         {
             rb.AddForce(new Vector2(rb.velocity.x, 500f));
-            player_move_action.Play("Jump");
+            player_move_action.SetBool("Jump",true);
+            player_move_action.SetBool("OnGround", true);
         }
     }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag.Equals("Ground"))
+            player_move_action.SetBool("OnGround", true);
+    }
+
+ 
 }
