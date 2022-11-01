@@ -21,19 +21,30 @@ public class PlayerMovment : MonoBehaviour
     {
         direction = Input.GetAxis("Horizontal");
         rb.velocity = new Vector2(speed * direction, rb.velocity.y);
-        if (Input.GetButtonDown("Jump") && rb.velocity.y==0)
+        if (Input.GetButtonDown("Jump") && rb.velocity.y == 0)
         {
             rb.AddForce(new Vector2(rb.velocity.x, 500f));
-            player_move_action.SetBool("Jump",true);
-            player_move_action.SetBool("OnGround", true);
+            player_move_action.SetBool("Jump", true);
+            player_move_action.SetBool("OnGround", false);
         }
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
+        Debug.Log(collision.gameObject.tag);
         if (collision.gameObject.tag.Equals("Ground"))
+        {
             player_move_action.SetBool("OnGround", true);
+            player_move_action.SetBool("Jump", false);
+        }
     }
 
- 
+
+
+    /*private void OnCollisionStay(Collision collision)
+    {
+        Debug.Log(collision.gameObject.tag);
+        if (collision.gameObject.tag.Equals("Ground"))
+            player_move_action.SetBool("OnGround", true);
+    }*/
 }
