@@ -17,6 +17,12 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadScene(sceneName);
     }
 
+    public void GoToMenu(string sceneName)
+    {
+        //when a button calls this on click, go to Main menu
+        SceneManager.LoadScene(sceneName);
+    }
+
     public void Quit()
     {
         //When quit button is clicked, quit the game
