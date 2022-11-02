@@ -1,1 +1,0 @@
-You can use Minecraft custom font packs in this game.
