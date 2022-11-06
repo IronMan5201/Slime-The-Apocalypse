@@ -211,6 +211,7 @@ GameObject:
   - component: {fileID: 6045247968804795532}
   - component: {fileID: 7019064810487092724}
   - component: {fileID: -8661135910314309887}
+  - component: {fileID: 8862928849895139860}
   m_Layer: 0
   m_Name: button 1
   m_TagString: Untagged
@@ -281,3 +282,17 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &8862928849895139860
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6045247968804795523}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1bcbefd4983820f4c83dd0c6c6329c28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  button_Animation: {fileID: -8661135910314309887}
+  Door_Animtion: {fileID: 0}
