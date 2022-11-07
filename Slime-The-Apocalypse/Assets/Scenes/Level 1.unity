@@ -228,6 +228,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 288622866479250721, guid: 52148710a97c54f44a6b591bdcac4674, type: 3}
   m_PrefabInstance: {fileID: 934390941}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &465799475 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 2452498070902959124, guid: 52148710a97c54f44a6b591bdcac4674, type: 3}
+  m_PrefabInstance: {fileID: 934390941}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &570583341
 GameObject:
   m_ObjectHideFlags: 0
@@ -456,6 +461,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 1528334192751842350, guid: 52148710a97c54f44a6b591bdcac4674, type: 3}
+      propertyPath: playerMoveAction
+      value: 
+      objectReference: {fileID: 465799475}
     - target: {fileID: 7281598603817136629, guid: 52148710a97c54f44a6b591bdcac4674, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -583,7 +592,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.1, y: 0}
+  m_Offset: {x: 0.1, y: 0.1}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -594,7 +603,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.2, y: 1}
+  m_Size: {x: 1.2, y: 0.8}
   m_EdgeRadius: 0
 --- !u!1 &1080038929
 GameObject:
@@ -16650,6 +16659,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1378900945}
   - component: {fileID: 1378900946}
+  - component: {fileID: 1378900947}
   m_Layer: 0
   m_Name: Square
   m_TagString: Untagged
@@ -16724,6 +16734,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &1378900947
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1378900944}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.4}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 0.2}
+  m_EdgeRadius: 0
 --- !u!1 &1508365489
 GameObject:
   m_ObjectHideFlags: 0
@@ -16737,7 +16773,7 @@ GameObject:
   - component: {fileID: 1508365492}
   - component: {fileID: 1508365491}
   - component: {fileID: 1508365494}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Tilemap
   m_TagString: Ground
   m_Icon: {fileID: 0}
