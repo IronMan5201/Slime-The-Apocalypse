@@ -228,11 +228,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 288622866479250721, guid: 52148710a97c54f44a6b591bdcac4674, type: 3}
   m_PrefabInstance: {fileID: 934390941}
   m_PrefabAsset: {fileID: 0}
---- !u!95 &465799475 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 2452498070902959124, guid: 52148710a97c54f44a6b591bdcac4674, type: 3}
-  m_PrefabInstance: {fileID: 934390941}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &570583341
 GameObject:
   m_ObjectHideFlags: 0
@@ -461,10 +456,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 1528334192751842350, guid: 52148710a97c54f44a6b591bdcac4674, type: 3}
-      propertyPath: playerMoveAction
-      value: 
-      objectReference: {fileID: 465799475}
     - target: {fileID: 7281598603817136629, guid: 52148710a97c54f44a6b591bdcac4674, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -16804,7 +16795,7 @@ TilemapCollider2D:
   m_GameObject: {fileID: 1508365489}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: cc6e0426ae3536b44a6a3e19f5d553dd, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0

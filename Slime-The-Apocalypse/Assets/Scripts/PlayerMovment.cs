@@ -7,7 +7,7 @@ public class PlayerMovment : MonoBehaviour
     public float speed = 7.5f;
     private Rigidbody2D rb;
     private float direction;
-
+    private bool doubleJump;
     //Animtorcontroller of the player.
     public Animator playerMoveAction;
     // Start is called before the first frame update
@@ -23,14 +23,24 @@ public class PlayerMovment : MonoBehaviour
             playerMoveAction.SetBool("isWalk", true);
         else
             playerMoveAction.SetBool("isWalk", false);
-
+        if (Input.GetAxis("Horizontal") < 0)
+            GetComponent<Transform>().localScale = new Vector3(-5, 5, 1);
+        else if (Input.GetAxis("Horizontal") > 0)
+            GetComponent<Transform>().localScale = new Vector3(5, 5, 1);
         direction = Input.GetAxis("Horizontal");
         rb.velocity = new Vector2(speed * direction, rb.velocity.y);
         if (Input.GetButtonDown("Jump") && rb.velocity.y == 0)
         {
-            rb.AddForce(new Vector2(rb.velocity.x, 500f));
+            rb.AddForce(new Vector2(rb.velocity.x, 750f));
             playerMoveAction.SetBool("Jump", true);
             playerMoveAction.SetBool("OnGround", false);
+        }
+        else if (Input.GetButtonDown("Jump") && doubleJump)
+        {
+            rb.AddForce(new Vector2(rb.velocity.x, 500f));
+            playerMoveAction.SetBool("Jump", false);
+            playerMoveAction.SetBool("Jump", true);
+            doubleJump = false;
         }
     }
 
@@ -41,6 +51,7 @@ public class PlayerMovment : MonoBehaviour
         {
             playerMoveAction.SetBool("OnGround", true);
             playerMoveAction.SetBool("Jump", false);
+            doubleJump = true;
         }
     }
 
