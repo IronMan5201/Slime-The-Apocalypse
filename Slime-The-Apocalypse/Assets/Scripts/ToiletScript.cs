@@ -14,13 +14,16 @@ public class ToiletScript : MonoBehaviour
         UI.SetActive(true);
         Time.timeScale = 1f;
     }
-    void OnCollisionEnter2D(Collision2D collsion)
+    void OnCollisionEnter2D(Collision2D collision)
     {
-        UI.SetActive(false);
-        winMenu.SetActive(true);
-        Time.timeScale = 0f;
+        if (collision.gameObject.tag == "Player")
+        {
+            UI.SetActive(false);
+            winMenu.SetActive(true);
+            Time.timeScale = 0f;
+        }
     }
-    public void nextLevel()
+    public void NextLevel()
     {
         SceneManager.LoadScene(nextLevel);
     }
