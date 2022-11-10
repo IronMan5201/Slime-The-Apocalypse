@@ -33,20 +33,20 @@ public class PlatformMovement : MonoBehaviour
             if (y_goal > Platforms_position.position.y)
             {
                 i = Platforms_position.position;
-                j = platform_moved2.offset;
+                //j = platform_moved2.offset;
                 i.y += Platform_Speed;
-                j.y += Platform_Speed;
+                //j.y += Platform_Speed;
                 Platforms_position.position = i;
-                platform_moved2.offset = j;
+                //platform_moved2.offset = j;
             }
             else
             {
                 i = Platforms_position.position;
-                j = platform_moved2.offset;
+                //j = platform_moved2.offset;
                 i.y -= Platform_Speed;
-                j.y -= Platform_Speed;
+                //j.y -= Platform_Speed;
                 Platforms_position.position = i;
-                platform_moved2.offset = j;
+                //platform_moved2.offset = j;
             }
             y_goal = goal_location();
         } 
