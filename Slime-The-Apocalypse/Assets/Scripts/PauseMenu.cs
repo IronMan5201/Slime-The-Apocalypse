@@ -45,4 +45,9 @@ public class PauseMenu : MonoBehaviour
     {
         return GameIsPaused;
     }
+
+    public void SetPause(bool value)
+    {
+        GameIsPaused = value;
+    }
 }
