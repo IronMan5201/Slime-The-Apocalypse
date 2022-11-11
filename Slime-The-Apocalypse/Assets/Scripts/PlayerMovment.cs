@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerMovment : MonoBehaviour
 {
-    [SerializeField] private PowerUp currentPowerUp = PowerUp.NONE;
+    public PowerUp currentPowerUp = PowerUp.NONE;
     public float speed = 7.5f;
     private Rigidbody2D rb;
     private float direction;
