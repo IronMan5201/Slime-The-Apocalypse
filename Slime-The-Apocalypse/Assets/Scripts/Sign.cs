@@ -4,15 +4,19 @@ using UnityEngine;
 
 public class Sign : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public PowerUp powerUp;
+
+    private void OnTriggerStay2D(Collider2D collision)
     {
-        
+        Debug.Log("triggered");
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            if (collision.gameObject.tag == "Player")
+            {
+                collision.GetComponent<PlayerMovment>().SetPowerUp(powerUp);
+                Destroy(this);
+            }
+        }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
