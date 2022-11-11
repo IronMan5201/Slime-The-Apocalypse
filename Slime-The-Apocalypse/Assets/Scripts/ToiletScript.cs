@@ -8,6 +8,7 @@ public class ToiletScript : MonoBehaviour
     public GameObject winMenu;
     public GameObject UI;
     public GameObject backgroundMusic;
+    public GameObject winSound;
     public PauseMenu menu;
     public string nextLevel;
     void Start()
@@ -25,6 +26,7 @@ public class ToiletScript : MonoBehaviour
             winMenu.SetActive(true);
             Time.timeScale = 0f;
             menu.SetPause(true);
+            winSound.GetComponent<AudioSource>().Play();
             backgroundMusic.GetComponent<AudioSource>().volume -= 0.9f;
         }
     }
