@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum PowerUp { JUMP, SHOT, HOVER}
+public enum PowerUp { NONE, JUMP, SHOT, HOVER}
 public class GameManager : MonoBehaviour
 {
     public bool win = false;

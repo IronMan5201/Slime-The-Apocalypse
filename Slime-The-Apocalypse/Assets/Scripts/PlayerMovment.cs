@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerMovment : MonoBehaviour
 {
+    private PowerUp currentPowerUp = PowerUp.NONE;
     public float speed = 7.5f;
     private Rigidbody2D rb;
     private float direction;
@@ -35,17 +36,23 @@ public class PlayerMovment : MonoBehaviour
             playerMoveAction.SetBool("Jump", true);
             playerMoveAction.SetBool("OnGround", false);
         }
-        else if (Input.GetButton("Jump")&&rb.velocity.y<0)
+
+        switch (currentPowerUp)
         {
-            rb.AddForce(new Vector2(rb.velocity.x, 1.25f));
+            case PowerUp.JUMP:
+                DoubleJump();
+                break;
+            case PowerUp.HOVER:
+                Hover();
+                break;
+            case PowerUp.SHOT:
+                break;
+            case PowerUp.NONE:
+                break;
+            default:
+                break;
         }
-        /*else if (Input.GetButtonDown("Jump") && doubleJump)
-        {
-            rb.AddForce(new Vector2(rb.velocity.x, 500f));
-            playerMoveAction.SetBool("Jump", false);
-            playerMoveAction.SetBool("Jump", true);
-            doubleJump = false;
-        }*/
+
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -59,7 +66,24 @@ public class PlayerMovment : MonoBehaviour
         }
     }
 
+    public void DoubleJump()
+    {
+        if (Input.GetButtonDown("Jump") && doubleJump)
+        {
+            rb.AddForce(new Vector2(rb.velocity.x, 500f));
+            playerMoveAction.SetBool("Jump", false);
+            playerMoveAction.SetBool("Jump", true);
+            doubleJump = false;
+        }
+    }
 
+    public void Hover()
+    {
+        if (Input.GetButton("Jump") && rb.velocity.y < 0)
+        {
+            rb.AddForce(new Vector2(rb.velocity.x, 1.25f));
+        }
+    }
 
     /*private void OnCollisionStay(Collision collision)
     {
@@ -67,4 +91,9 @@ public class PlayerMovment : MonoBehaviour
         if (collision.gameObject.tag.Equals("Ground"))
             player_move_action.SetBool("OnGround", true);
     }*/
+
+    public void SetPowerUp(PowerUp pu)
+    {
+        currentPowerUp = pu;
+    }
 }
