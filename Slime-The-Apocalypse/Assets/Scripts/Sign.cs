@@ -6,17 +6,32 @@ public class Sign : MonoBehaviour
 {
     public PowerUp powerUp;
 
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        Debug.Log("triggered");
+        //if (Input.GetKeyDown(KeyCode.E))
+        //{
+        if (collision.gameObject.tag.Equals("Player"))
+        {
+            Debug.Log("hit");
+            collision.gameObject.GetComponent<PlayerMovment>().SetPowerUp(powerUp);
+            Destroy(gameObject);
+        }
+        //}
+    }
+
     private void OnTriggerStay2D(Collider2D collision)
     {
         Debug.Log("triggered");
-        if (Input.GetKeyDown(KeyCode.E))
+        //if (Input.GetKeyDown(KeyCode.E))
+        //{
+        if (collision.gameObject.tag.Equals("Player"))
         {
-            if (collision.gameObject.tag == "Player")
-            {
-                collision.GetComponent<PlayerMovment>().SetPowerUp(powerUp);
-                Destroy(this);
-            }
+            Debug.Log("hit");
+            collision.gameObject.GetComponent<PlayerMovment>().SetPowerUp(powerUp);
+            Destroy(gameObject);
         }
+        //}
     }
 
 }

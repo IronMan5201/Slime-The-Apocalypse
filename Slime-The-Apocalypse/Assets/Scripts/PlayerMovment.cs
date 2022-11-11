@@ -8,7 +8,8 @@ public class PlayerMovment : MonoBehaviour
     public float speed = 7.5f;
     private Rigidbody2D rb;
     private float direction;
-    private bool doubleJump;
+    [SerializeField]private bool doubleJump;
+    [SerializeField] private bool jumpOne;
     //Animtorcontroller of the player.
     public Animator playerMoveAction;
     // Start is called before the first frame update
@@ -30,12 +31,6 @@ public class PlayerMovment : MonoBehaviour
             GetComponent<Transform>().localScale = new Vector3(5, 5, 1);
         direction = Input.GetAxis("Horizontal");
         rb.velocity = new Vector2(speed * direction, rb.velocity.y);
-        if (Input.GetButtonDown("Jump") && rb.velocity.y == 0)
-        {
-            rb.AddForce(new Vector2(rb.velocity.x, 750f));
-            playerMoveAction.SetBool("Jump", true);
-            playerMoveAction.SetBool("OnGround", false);
-        }
 
         switch (currentPowerUp)
         {
@@ -45,6 +40,19 @@ public class PlayerMovment : MonoBehaviour
             case PowerUp.HOVER:
                 Hover();
                 break;
+        }
+
+        if (Input.GetButtonDown("Jump") && playerMoveAction.GetBool("OnGround"))
+        {
+            rb.AddForce(new Vector2(rb.velocity.x, 750f));
+            playerMoveAction.SetBool("Jump", true);
+            playerMoveAction.SetBool("OnGround", false);
+            jumpOne = true;
+            
+        }
+
+        switch (currentPowerUp)
+        {
             case PowerUp.SHOT:
                 break;
             case PowerUp.NONE:
@@ -63,16 +71,18 @@ public class PlayerMovment : MonoBehaviour
             playerMoveAction.SetBool("OnGround", true);
             playerMoveAction.SetBool("Jump", false);
             doubleJump = true;
+            jumpOne = false;
         }
     }
 
     public void DoubleJump()
     {
-        if (Input.GetButtonDown("Jump") && doubleJump)
+        if (Input.GetButtonDown("Jump") && doubleJump && jumpOne == true)
         {
             rb.AddForce(new Vector2(rb.velocity.x, 500f));
-            playerMoveAction.SetBool("Jump", false);
+            playerMoveAction.SetBool("OnGround", false);
             playerMoveAction.SetBool("Jump", true);
+            Debug.Log("jumped");
             doubleJump = false;
         }
     }
