@@ -35,13 +35,17 @@ public class PlayerMovment : MonoBehaviour
             playerMoveAction.SetBool("Jump", true);
             playerMoveAction.SetBool("OnGround", false);
         }
-        else if (Input.GetButtonDown("Jump") && doubleJump)
+        else if (Input.GetButton("Jump")&&rb.velocity.y<0)
+        {
+            rb.AddForce(new Vector2(rb.velocity.x, 1.25f));
+        }
+        /*else if (Input.GetButtonDown("Jump") && doubleJump)
         {
             rb.AddForce(new Vector2(rb.velocity.x, 500f));
             playerMoveAction.SetBool("Jump", false);
             playerMoveAction.SetBool("Jump", true);
             doubleJump = false;
-        }
+        }*/
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
