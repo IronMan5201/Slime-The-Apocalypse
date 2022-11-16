@@ -179,8 +179,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e572968681dfac64b8129e50871404b6
-      internalID: -681598831
+      spriteID: 8224732f7ee962643bd3508146fb0d87
+      internalID: -1373057356
       vertices: []
       indices: 
       edges: []
@@ -200,8 +200,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1ec20a0afcc7a72468536a379a6c7ae5
-      internalID: 1771401381
+      spriteID: d050130052d63244d849bf5dfe5c384f
+      internalID: -1080900174
       vertices: []
       indices: 
       edges: []
@@ -221,8 +221,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ba670e2b186e4d348a97c2ad4cb429b9
-      internalID: -1068588638
+      spriteID: d7a068ea98a43b745a8fc98476698c74
+      internalID: -2136204330
       vertices: []
       indices: 
       edges: []
@@ -242,8 +242,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ba2ed3dcb74f99e4d85aa45752301ee5
-      internalID: -1503609712
+      spriteID: e3da9f706cb090a4d8eb7f56f1ab0166
+      internalID: 983278742
       vertices: []
       indices: 
       edges: []
@@ -263,8 +263,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 59057fb714338b244805eecac6b17bd0
-      internalID: 602709736
+      spriteID: 86c56063171462e43b6eb3a39739138a
+      internalID: -867260761
       vertices: []
       indices: 
       edges: []
@@ -284,8 +284,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c707ff612ac69ce42a3ea1785205cd42
-      internalID: -1716818687
+      spriteID: 4c77feaee96462c4da49f5159a744ac6
+      internalID: 2092208810
       vertices: []
       indices: 
       edges: []
@@ -305,8 +305,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 44cbdd839149376429512389f507e779
-      internalID: 357820160
+      spriteID: 3ea377960586f8c44b09bf7fe722f645
+      internalID: 1900247341
       vertices: []
       indices: 
       edges: []
@@ -326,8 +326,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cbabb622b4fe9694b8aed3cb3b14deef
-      internalID: 1416787299
+      spriteID: eddd336a1e090cb4eab2fe1459fdaeb7
+      internalID: 360024132
       vertices: []
       indices: 
       edges: []
@@ -347,8 +347,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 02869560bba9d674dac226a45d295c5c
-      internalID: 2102431263
+      spriteID: c1ecf532781e70444ab0e9a0ddbb16a4
+      internalID: 1460833810
       vertices: []
       indices: 
       edges: []
@@ -368,8 +368,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ef440aa092b3d9045876bde7ecd64d30
-      internalID: 1302772224
+      spriteID: 1e5c48baedfc1f745adbf850e7374637
+      internalID: -1743668364
       vertices: []
       indices: 
       edges: []
@@ -389,8 +389,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4af541f1b93b51c4385b9a1e29041298
-      internalID: 1239563282
+      spriteID: 1b9d33df9d4972245965135b64bd4f7b
+      internalID: 2074859787
       vertices: []
       indices: 
       edges: []
@@ -406,17 +406,17 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      RatKingIdle_1: 1771401381
-      RatKingIdle_8: 2102431263
-      RatKingIdle_0: -681598831
-      RatKingIdle_4: 602709736
-      RatKingIdle_5: -1716818687
-      RatKingIdle_2: -1068588638
-      RatKingIdle_6: 357820160
-      RatKingIdle_9: 1302772224
-      RatKingIdle_3: -1503609712
-      RatKingIdle_7: 1416787299
-      RatKingIdle_10: 1239563282
+      RatKingIdle_1: -1080900174
+      RatKingIdle_8: 1460833810
+      RatKingIdle_0: -1373057356
+      RatKingIdle_4: -867260761
+      RatKingIdle_5: 2092208810
+      RatKingIdle_2: -2136204330
+      RatKingIdle_6: 1900247341
+      RatKingIdle_9: -1743668364
+      RatKingIdle_3: 983278742
+      RatKingIdle_7: 360024132
+      RatKingIdle_10: 2074859787
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

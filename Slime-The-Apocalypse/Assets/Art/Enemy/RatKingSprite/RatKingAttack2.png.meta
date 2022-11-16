@@ -42,7 +42,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -163,154 +163,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: RatKingAttack2_0
-      rect:
-        serializedVersion: 2
-        x: 47
-        y: 66
-        width: 63
-        height: 51
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 879d3a575b015b943b2f2d6eeb36ef47
-      internalID: -1148182772
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: RatKingAttack2_1
-      rect:
-        serializedVersion: 2
-        x: 233
-        y: 66
-        width: 60
-        height: 55
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 28827c29f6f461641b1a751f8b7d9304
-      internalID: 1982977272
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: RatKingAttack2_2
-      rect:
-        serializedVersion: 2
-        x: 418
-        y: 66
-        width: 55
-        height: 62
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e46f17f6fe7a51d4882cba0c7a4c61f0
-      internalID: -901267250
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: RatKingAttack2_3
-      rect:
-        serializedVersion: 2
-        x: 600
-        y: 66
-        width: 115
-        height: 80
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 901cbd43113699044968157c6c9424b7
-      internalID: -1871574586
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: RatKingAttack2_4
-      rect:
-        serializedVersion: 2
-        x: 817
-        y: 66
-        width: 79
-        height: 80
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 552318acd64910e4cb631534352dbe0c
-      internalID: -347815389
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: RatKingAttack2_5
-      rect:
-        serializedVersion: 2
-        x: 997
-        y: 66
-        width: 83
-        height: 49
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8d439240db3d64842a888de3a064480f
-      internalID: -64189747
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: RatKingAttack2_6
-      rect:
-        serializedVersion: 2
-        x: 1177
-        y: 66
-        width: 82
-        height: 47
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a4197a47557651c4aa513d15a224b001
-      internalID: 1846296871
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     physicsShape: []
     bones: []
@@ -321,14 +174,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      RatKingAttack2_4: -347815389
-      RatKingAttack2_3: -1871574586
-      RatKingAttack2_5: -64189747
-      RatKingAttack2_1: 1982977272
-      RatKingAttack2_0: -1148182772
-      RatKingAttack2_6: 1846296871
-      RatKingAttack2_2: -901267250
+    nameFileIdTable: {}
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
