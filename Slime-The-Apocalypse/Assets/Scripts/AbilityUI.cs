@@ -22,14 +22,14 @@ public class AbilityUI : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        powerUp = player.GetComponent<PlayerMovment>().currentPowerUp;
+        powerUp = player.GetComponent<PlayerMovement>().currentPowerUp;
         abilityGUI.text = "Ability:\nNone";
     }
 
     // Update is called once per frame
     void Update()
     {
-        powerUp = player.GetComponent<PlayerMovment>().currentPowerUp;
+        powerUp = player.GetComponent<PlayerMovement>().currentPowerUp;
         string text = "NONE";
         switch (powerUp)
         {

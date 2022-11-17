@@ -16,7 +16,7 @@ public class Sign : MonoBehaviour
         if (collision.gameObject.tag.Equals("Player"))
         {
             Debug.Log("hit");
-            collision.gameObject.GetComponent<PlayerMovment>().SetPowerUp(powerUp);
+            collision.gameObject.GetComponent<PlayerMovement>().SetPowerUp(powerUp);
             Destroy(gameObject);
         }
         //}
@@ -31,7 +31,7 @@ public class Sign : MonoBehaviour
         {
             Debug.Log("hit");
             powerUpSound.GetComponent<AudioSource>().Play();
-            collision.gameObject.GetComponent<PlayerMovment>().SetPowerUp(powerUp);
+            collision.gameObject.GetComponent<PlayerMovement>().SetPowerUp(powerUp);
             Destroy(gameObject);
         }
         //}
