@@ -42,7 +42,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -163,7 +163,238 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: RatKingDeath_0
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 66
+        width: 47
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31ab8b24b886fcf47ab3b4c2cefa8d7e
+      internalID: -688785405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RatKingDeath_1
+      rect:
+        serializedVersion: 2
+        x: 253
+        y: 66
+        width: 47
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0b725962bd2eae4280c24478d50ae42
+      internalID: -1999013348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RatKingDeath_2
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 66
+        width: 46
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c38c0da9eed121748a1674c8fc5b3dc7
+      internalID: -1914411675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RatKingDeath_3
+      rect:
+        serializedVersion: 2
+        x: 615
+        y: 66
+        width: 51
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4941745b226b414ca448ff75bc1de6c
+      internalID: -1579989872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RatKingDeath_4
+      rect:
+        serializedVersion: 2
+        x: 795
+        y: 66
+        width: 73
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e61950157926d904b963ff5dcc9b92ac
+      internalID: -866279470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RatKingDeath_5
+      rect:
+        serializedVersion: 2
+        x: 975
+        y: 66
+        width: 73
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4b104cbe9abf2b41851592f67f8f3d6
+      internalID: -2131500172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RatKingDeath_6
+      rect:
+        serializedVersion: 2
+        x: 1155
+        y: 66
+        width: 76
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e31bfa1627989d4292217aca43b9206
+      internalID: -371540609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RatKingDeath_7
+      rect:
+        serializedVersion: 2
+        x: 1334
+        y: 66
+        width: 79
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8635e8490423f44ca63883ee075a231
+      internalID: 1684738249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RatKingDeath_8
+      rect:
+        serializedVersion: 2
+        x: 1518
+        y: 66
+        width: 75
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 907a85f7e04083042ab87f06ef5877b8
+      internalID: 30609543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RatKingDeath_9
+      rect:
+        serializedVersion: 2
+        x: 1703
+        y: 65
+        width: 93
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28ded7c1603e02c4593fc2e8e1f9c6ff
+      internalID: 2072292283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RatKingDeath_10
+      rect:
+        serializedVersion: 2
+        x: 1883
+        y: 66
+        width: 70
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 264ad6d9813950b428d0d496bbd8ad03
+      internalID: -1767722461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -174,7 +405,18 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      RatKingDeath_4: -866279470
+      RatKingDeath_7: 1684738249
+      RatKingDeath_8: 30609543
+      RatKingDeath_3: -1579989872
+      RatKingDeath_10: -1767722461
+      RatKingDeath_2: -1914411675
+      RatKingDeath_1: -1999013348
+      RatKingDeath_6: -371540609
+      RatKingDeath_0: -688785405
+      RatKingDeath_5: -2131500172
+      RatKingDeath_9: 2072292283
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

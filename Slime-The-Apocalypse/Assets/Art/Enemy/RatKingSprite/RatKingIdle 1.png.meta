@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 9afca18730dbd754a8e0b9fdbc3a6d90
+guid: 5110164e1bb798f4986124ca14e30901
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -165,7 +165,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: RatKingIdle_0
+      name: RatKingIdle 1_0
       rect:
         serializedVersion: 2
         x: 73
@@ -179,14 +179,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8224732f7ee962643bd3508146fb0d87
-      internalID: -1373057356
+      spriteID: fa44f836e34a42f4899f746e99d380d0
+      internalID: -1713275340
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RatKingIdle_1
+      name: RatKingIdle 1_1
       rect:
         serializedVersion: 2
         x: 253
@@ -200,14 +200,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d050130052d63244d849bf5dfe5c384f
-      internalID: -1080900174
+      spriteID: 7d36006dd202a74458f7077b9bd3cb13
+      internalID: 2081245622
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RatKingIdle_2
+      name: RatKingIdle 1_2
       rect:
         serializedVersion: 2
         x: 433
@@ -221,14 +221,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d7a068ea98a43b745a8fc98476698c74
-      internalID: -2136204330
+      spriteID: 73c1fd6fb6a3fae4b9b078ed3f7947fe
+      internalID: -1110143604
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RatKingIdle_3
+      name: RatKingIdle 1_3
       rect:
         serializedVersion: 2
         x: 613
@@ -242,14 +242,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e3da9f706cb090a4d8eb7f56f1ab0166
-      internalID: 983278742
+      spriteID: 20e32cd3aad0ccd4b85f44fdf211d9ca
+      internalID: 49810064
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RatKingIdle_4
+      name: RatKingIdle 1_4
       rect:
         serializedVersion: 2
         x: 793
@@ -263,14 +263,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 86c56063171462e43b6eb3a39739138a
-      internalID: -867260761
+      spriteID: 994929ba9574a0b47be9b798400b4091
+      internalID: -1547997541
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RatKingIdle_5
+      name: RatKingIdle 1_5
       rect:
         serializedVersion: 2
         x: 973
@@ -284,14 +284,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4c77feaee96462c4da49f5159a744ac6
-      internalID: 2092208810
+      spriteID: e447dcbb4811bfb4288c228fd23ae9ea
+      internalID: 1332096901
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RatKingIdle_6
+      name: RatKingIdle 1_6
       rect:
         serializedVersion: 2
         x: 1153
@@ -305,14 +305,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3ea377960586f8c44b09bf7fe722f645
-      internalID: 1900247341
+      spriteID: ae8ac6f022b06694cb82df4fbd331a17
+      internalID: 1210375575
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RatKingIdle_7
+      name: RatKingIdle 1_7
       rect:
         serializedVersion: 2
         x: 1333
@@ -326,14 +326,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: eddd336a1e090cb4eab2fe1459fdaeb7
-      internalID: 360024132
+      spriteID: 4640dfae7a1547b4e9bd211849d3b134
+      internalID: -1695551391
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RatKingIdle_8
+      name: RatKingIdle 1_8
       rect:
         serializedVersion: 2
         x: 1513
@@ -347,14 +347,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c1ecf532781e70444ab0e9a0ddbb16a4
-      internalID: 1460833810
+      spriteID: ef5c4bf2c45720f42ad30e2c5a914774
+      internalID: 1564902053
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RatKingIdle_9
+      name: RatKingIdle 1_9
       rect:
         serializedVersion: 2
         x: 1693
@@ -368,14 +368,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1e5c48baedfc1f745adbf850e7374637
-      internalID: -1743668364
+      spriteID: 4062ac2f0aa3a8648948326b0968309a
+      internalID: -2133755652
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RatKingIdle_10
+      name: RatKingIdle 1_10
       rect:
         serializedVersion: 2
         x: 1873
@@ -389,8 +389,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1b9d33df9d4972245965135b64bd4f7b
-      internalID: 2074859787
+      spriteID: 235ab9f93b8176749b6a94d0f705a4a6
+      internalID: 1593382227
       vertices: []
       indices: 
       edges: []
@@ -406,17 +406,17 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      RatKingIdle_1: -1080900174
-      RatKingIdle_8: 1460833810
-      RatKingIdle_0: -1373057356
-      RatKingIdle_4: -867260761
-      RatKingIdle_5: 2092208810
-      RatKingIdle_2: -2136204330
-      RatKingIdle_6: 1900247341
-      RatKingIdle_9: -1743668364
-      RatKingIdle_3: 983278742
-      RatKingIdle_7: 360024132
-      RatKingIdle_10: 2074859787
+      RatKingIdle 1_8: 1564902053
+      RatKingIdle 1_5: 1332096901
+      RatKingIdle 1_2: -1110143604
+      RatKingIdle 1_1: 2081245622
+      RatKingIdle 1_6: 1210375575
+      RatKingIdle 1_3: 49810064
+      RatKingIdle 1_0: -1713275340
+      RatKingIdle 1_7: -1695551391
+      RatKingIdle 1_10: 1593382227
+      RatKingIdle 1_4: -1547997541
+      RatKingIdle 1_9: -2133755652
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

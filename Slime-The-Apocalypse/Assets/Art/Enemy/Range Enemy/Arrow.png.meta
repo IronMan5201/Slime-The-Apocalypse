@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: ba21ced54f0185042a1306cbfb58029e
+guid: 99f0e363546fdcd469ceea327cb48819
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -42,7 +42,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -163,175 +163,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: KingRatRUN_0
-      rect:
-        serializedVersion: 2
-        x: 75
-        y: 66
-        width: 43
-        height: 54
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 405ed809454cf924682c2a0f506b6ac9
-      internalID: -1747118805
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: KingRatRUN_1
-      rect:
-        serializedVersion: 2
-        x: 250
-        y: 70
-        width: 47
-        height: 50
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1b981ad04ad9b894a8a1986ffd7e6c5d
-      internalID: 1821280412
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: KingRatRUN_2
-      rect:
-        serializedVersion: 2
-        x: 435
-        y: 69
-        width: 42
-        height: 52
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b5b14122fe013bd44872ff9dbd42e5e5
-      internalID: -2118748417
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: KingRatRUN_3
-      rect:
-        serializedVersion: 2
-        x: 618
-        y: 66
-        width: 39
-        height: 55
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9466819f2adb8b24fa439618a1497386
-      internalID: -1691514706
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: KingRatRUN_4
-      rect:
-        serializedVersion: 2
-        x: 797
-        y: 66
-        width: 40
-        height: 54
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 75a467283dd807f4c997ae1a09774b7f
-      internalID: -270120732
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: KingRatRUN_5
-      rect:
-        serializedVersion: 2
-        x: 971
-        y: 72
-        width: 46
-        height: 50
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f11c67e8420f5a4418c1e864ab675e23
-      internalID: 1720894968
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: KingRatRUN_6
-      rect:
-        serializedVersion: 2
-        x: 1157
-        y: 72
-        width: 40
-        height: 50
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 25ffa2b2102b8fd479927f9e2fcf43c9
-      internalID: -935036630
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: KingRatRUN_7
-      rect:
-        serializedVersion: 2
-        x: 1337
-        y: 65
-        width: 40
-        height: 56
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: adec27de6d80f484999855a805e5fbc2
-      internalID: -709129895
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     physicsShape: []
     bones: []
@@ -342,15 +174,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      KingRatRUN_0: -1747118805
-      KingRatRUN_4: -270120732
-      KingRatRUN_7: -709129895
-      KingRatRUN_2: -2118748417
-      KingRatRUN_5: 1720894968
-      KingRatRUN_6: -935036630
-      KingRatRUN_1: 1821280412
-      KingRatRUN_3: -1691514706
+    nameFileIdTable: {}
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
