@@ -5,7 +5,11 @@ using UnityEngine;
 public class PlayerMovment : MonoBehaviour
 {
     public PowerUp currentPowerUp = PowerUp.NONE;
+    public int health = 3;
     public float speed = 7.5f;
+
+    public GameObject jumpSound;
+    private AudioSource jumpAudio;
     private Rigidbody2D rb;
     private float direction;
     [SerializeField]private bool doubleJump;
@@ -16,6 +20,8 @@ public class PlayerMovment : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        jumpAudio = jumpSound.GetComponent<AudioSource>();
+
     }
 
     // Update is called once per frame
@@ -44,6 +50,7 @@ public class PlayerMovment : MonoBehaviour
 
         if (Input.GetButtonDown("Jump") && playerMoveAction.GetBool("OnGround"))
         {
+            jumpAudio.Play();
             rb.AddForce(new Vector2(rb.velocity.x, 750f));
             playerMoveAction.SetBool("Jump", true);
             playerMoveAction.SetBool("OnGround", false);
@@ -79,6 +86,7 @@ public class PlayerMovment : MonoBehaviour
     {
         if (Input.GetButtonDown("Jump") && doubleJump && jumpOne == true)
         {
+            jumpAudio.Play();
             rb.AddForce(new Vector2(rb.velocity.x, 500f));
             playerMoveAction.SetBool("OnGround", false);
             playerMoveAction.SetBool("Jump", true);

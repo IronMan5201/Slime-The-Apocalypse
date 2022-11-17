@@ -6,6 +6,8 @@ public class Sign : MonoBehaviour
 {
     public PowerUp powerUp;
 
+    public GameObject powerUpSound;
+
     private void OnCollisionStay2D(Collision2D collision)
     {
         Debug.Log("triggered");
@@ -28,6 +30,7 @@ public class Sign : MonoBehaviour
         if (collision.gameObject.tag.Equals("Player"))
         {
             Debug.Log("hit");
+            powerUpSound.GetComponent<AudioSource>().Play();
             collision.gameObject.GetComponent<PlayerMovment>().SetPowerUp(powerUp);
             Destroy(gameObject);
         }
