@@ -26,7 +26,7 @@ public class Button : MonoBehaviour
     }
     void OnCollisionEnter2D(Collision2D collision)
     {        
-        if (collision.gameObject.tag == "Player")
+        if (collision.gameObject.tag == "Player" || collision.gameObject.tag == "Enemy")
         {
             buttonAudio.Play();
             button_Animation.SetBool("Press_Button", true);

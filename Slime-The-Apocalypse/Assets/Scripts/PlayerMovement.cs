@@ -7,6 +7,7 @@ public class PlayerMovement : MonoBehaviour
     public PowerUp currentPowerUp = PowerUp.NONE;
     public int health = 3;
     public float speed = 7.5f;
+    private bool invulnerable = false;
 
     public GameObject jumpSound;
     private AudioSource jumpAudio;
@@ -14,8 +15,11 @@ public class PlayerMovement : MonoBehaviour
     private float direction;
     [SerializeField]private bool doubleJump;
     [SerializeField] private bool jumpOne;
+
     //Animtorcontroller of the player.
     public Animator playerMoveAction;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -113,5 +117,22 @@ public class PlayerMovement : MonoBehaviour
     public void SetPowerUp(PowerUp pu)
     {
         currentPowerUp = pu;
+    }
+
+    public void LoseHealth(int amount)
+    {
+        if (!invulnerable)
+        {
+            health -= amount;
+            StartCoroutine(Invulnerablity());
+        }
+        
+    }
+
+    IEnumerator Invulnerablity()
+    {
+        invulnerable = true;
+        yield return new WaitForSeconds(3f);
+        invulnerable = false;
     }
 }
