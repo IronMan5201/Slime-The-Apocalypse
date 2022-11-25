@@ -8,6 +8,7 @@ TagManager:
   - Range_Enemies
   - Ground
   - Enemy
+  - MovingPlatform
   layers:
   - Default
   - TransparentFX
@@ -17,7 +18,7 @@ TagManager:
   - UI
   - Entities
   - Obstacles
-  - 
+  - Ground
   - 
   - 
   - 

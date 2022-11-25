@@ -8,6 +8,7 @@ public class PauseMenu : MonoBehaviour
     public static bool GameIsPaused = false;
 
     public GameObject pauseMenuUI;
+    public GameObject diedMenuUI;
 
     public GameObject backgroundMusic;
 
@@ -39,6 +40,15 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 1f;
         GameIsPaused = false;
         SceneManager.LoadScene(sceneName);  //loads scene from build settings at index 0, which is our main menu
+    }
+
+    public void PlayerDied()
+    {
+        diedMenuUI.SetActive(true);
+        infoDisplay.SetActive(false);
+        Time.timeScale = 0f;  //set the scale at which time passes to 0, frozen, paused
+        GameIsPaused = true;
+        backgroundMusic.GetComponent<AudioSource>().volume = 0.0f;
     }
 
     public bool IsPaused()
