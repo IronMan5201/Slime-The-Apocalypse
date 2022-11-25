@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Button : MonoBehaviour
 {
+    public bool isPressed;
     public GameObject buttonSound;
     public GameObject doorSound;
     private AudioSource doorAudio;
@@ -17,6 +18,7 @@ public class Button : MonoBehaviour
         Door_Animtion.SetBool("Is_Open", false);
         buttonAudio = buttonSound.GetComponent<AudioSource>();
         doorAudio = doorSound.GetComponent<AudioSource>();
+        isPressed = false;
     }
 
     // Update is called once per frame
@@ -25,7 +27,18 @@ public class Button : MonoBehaviour
 
     }
     void OnCollisionEnter2D(Collision2D collision)
-    {        
+    {
+        if(isPressed == true)
+        {
+            buttonAudio.volume = 0.0f;
+            doorAudio.volume = 0.0f;
+        }
+        else if(isPressed == false)
+        {
+            buttonAudio.volume = 1.0f;
+            doorAudio.volume = 0.2f;
+        }
+
         if (collision.gameObject.tag == "Player" || collision.gameObject.tag == "Enemy")
         {
             buttonAudio.Play();
@@ -33,6 +46,7 @@ public class Button : MonoBehaviour
             StartCoroutine(Waiter());
             Door_Animtion.SetBool("Is_Open", true);
             doorAudio.Play();
+            isPressed = true;
         }
     }
 
