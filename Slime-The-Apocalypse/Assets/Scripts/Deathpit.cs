@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class Deathpit : MonoBehaviour
 {
+    public PauseMenu Died;
     public bool objectDied;
 
     void Start()
@@ -23,7 +24,8 @@ public class Deathpit : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             Debug.Log("Player was Destroyed, restarting scene");
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            Died.PlayerDied();
         }
     }
 }
