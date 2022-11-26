@@ -14,8 +14,8 @@ public class Button : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        button_Animation.SetBool("Press_Button", false);
-        Door_Animtion.SetBool("Is_Open", false);
+        button_Animation.SetBool("PressButton", false);
+        Door_Animtion.SetBool("IsOpen", false);
         buttonAudio = buttonSound.GetComponent<AudioSource>();
         doorAudio = doorSound.GetComponent<AudioSource>();
         isPressed = false;
@@ -42,9 +42,9 @@ public class Button : MonoBehaviour
         if (collision.gameObject.tag == "Player" || collision.gameObject.tag == "Enemy")
         {
             buttonAudio.Play();
-            button_Animation.SetBool("Press_Button", true);
+            button_Animation.SetBool("PressButton", true);
             StartCoroutine(Waiter());
-            Door_Animtion.SetBool("Is_Open", true);
+            Door_Animtion.SetBool("IsOpen", true);
             doorAudio.Play();
             isPressed = true;
         }
