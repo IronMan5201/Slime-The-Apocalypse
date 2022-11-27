@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Text;
 using UnityEngine;
 
 public class Button : MonoBehaviour
@@ -43,15 +44,19 @@ public class Button : MonoBehaviour
         {
             buttonAudio.Play();
             button_Animation.SetBool("PressButton", true);
-            StartCoroutine(Waiter());
             Door_Animtion.SetBool("IsOpen", true);
             doorAudio.Play();
             isPressed = true;
+            StartCoroutine(Waiter());
+            isPressed = false;
         }
     }
 
     IEnumerator Waiter()
     {
+
         yield return new WaitForSeconds(10);
+        button_Animation.SetBool("PressButton", false);
+        Door_Animtion.SetBool("IsOpen", false);
     }
 }

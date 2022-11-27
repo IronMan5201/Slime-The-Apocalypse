@@ -8,7 +8,8 @@ public class PlayerMovement : MonoBehaviour
     public int health = 3;
     public float speed = 7.5f;
     private bool invulnerable = false;
-
+    public GameObject swallowedEnemy;
+    public GameObject shotPoint;
     public GameObject jumpSound;
     private AudioSource jumpAudio;
     private Rigidbody2D rb;
@@ -25,7 +26,7 @@ public class PlayerMovement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         jumpAudio = jumpSound.GetComponent<AudioSource>();
-
+        swallowedEnemy = null;
     }
 
     // Update is called once per frame
@@ -65,6 +66,7 @@ public class PlayerMovement : MonoBehaviour
         switch (currentPowerUp)
         {
             case PowerUp.SHOT:
+                //SwallowShot();
                 break;
             case PowerUp.NONE:
                 break;
@@ -98,6 +100,18 @@ public class PlayerMovement : MonoBehaviour
             doubleJump = false;
         }
     }
+
+    /*public void SwallowShot()
+    {
+        if (swallowedEnemy != null&&Input.GetButtonDown("Fire1"))
+        {
+            swallowedEnemy.transform.position=shotPoint.transform.position;
+            swallowedEnemy.SetActive(true);
+            swallowedEnemy.GetComponent<Rigidbody2D>().velocity = new Vector2(shotPoint.transform.position.x*20f, 0);
+            swallowedEnemy.GetComponent<Rigidbody2D>().AddForce(shotPoint.transform.right * 20f, ForceMode2D.Impulse);
+            swallowedEnemy = null;
+        }
+    }*/
 
     public void Hover()
     {

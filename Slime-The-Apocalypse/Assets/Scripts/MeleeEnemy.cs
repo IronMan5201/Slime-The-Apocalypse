@@ -12,7 +12,8 @@ public class MeleeEnemy : MonoBehaviour
             GameObject player = collision.gameObject;
             if (player.transform.position.y - 1 >= gameObject.transform.position.y)
             {
-                Destroy(gameObject);
+                player.GetComponent<PlayerMovement>().swallowedEnemy = gameObject;
+                gameObject.SetActive(false);
             }
             else
             {
