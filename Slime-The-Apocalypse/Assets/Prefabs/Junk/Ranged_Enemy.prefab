@@ -100,6 +100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 253854842755038306, guid: 2e06d4b9528b7da448f05595c2e93687, type: 3}
+  ShotAudio: {fileID: 0}
   firePoint: {fileID: 1198984147501240547}
   gun: {fileID: 1198984147110777768}
   shootTime: 2

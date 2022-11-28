@@ -168,7 +168,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 899b91380651a7f418636220ea6be1b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentPowerUp: 0
+  health: 3
   speed: 7.5
+  swallowedEnemy: {fileID: 2272152218999417014}
+  shotPoint: {fileID: 4283155958327305203}
+  jumpSound: {fileID: 0}
+  doubleJump: 0
+  jumpOne: 0
   playerMoveAction: {fileID: 2452498070902959124}
 --- !u!1 &2272152218999417014
 GameObject:
@@ -278,7 +285,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4283155958327305203}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.132, z: 0}
+  m_LocalPosition: {x: 0.349, y: 0.296, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
