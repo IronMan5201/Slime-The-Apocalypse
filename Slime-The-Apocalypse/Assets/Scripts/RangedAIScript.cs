@@ -6,7 +6,7 @@ public class RangedAIScript : MonoBehaviour
 {
     public GameObject bulletPrefab;
     public GameObject ShotAudio;
-    private AudioSource shotSound;
+    [SerializeField] private AudioSource shotSound;
     public Transform firePoint;
     private Collider2D player;
     public GameObject gun;
@@ -15,7 +15,8 @@ public class RangedAIScript : MonoBehaviour
     void start()
     {
         player = null;
-        shotSound = ShotAudio.GetComponent<AudioSource>();
+        if(shotSound == null)
+            shotSound = ShotAudio.GetComponent<AudioSource>();
     }
 
     void OnTriggerStay2D(Collider2D other)
@@ -35,8 +36,9 @@ public class RangedAIScript : MonoBehaviour
                 if (timer > shootTime)
                 {
                     timer = 0;
-                    shotSound.Play();
                     shoot();
+                    shotSound.Play();
+                    
                 }
             }
         }
