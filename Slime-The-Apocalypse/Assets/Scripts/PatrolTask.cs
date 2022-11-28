@@ -32,7 +32,7 @@ public class PatrolTask : BTNode
 
     public override NodeState Evaluate()
     {
-        if (Time.time >= 1f)
+        if (Time.time >= 1f && platformTracker.IsTouchingLayers(mask))
         {
             if (!spottedPlayer)
             {
