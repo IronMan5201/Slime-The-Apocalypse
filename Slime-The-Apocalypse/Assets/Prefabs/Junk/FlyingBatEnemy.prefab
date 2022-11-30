@@ -133,7 +133,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12c9147ede754c347a82e481b79574a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 253854842755038306, guid: 2e06d4b9528b7da448f05595c2e93687, type: 3}
+  bulletPrefab: {fileID: 6473526907819895953, guid: dd8e9b79cabc90b40aee451682716544, type: 3}
   ShotAudio: {fileID: 0}
   shotSound: {fileID: 0}
   firePoint: {fileID: 8502730031901452498}

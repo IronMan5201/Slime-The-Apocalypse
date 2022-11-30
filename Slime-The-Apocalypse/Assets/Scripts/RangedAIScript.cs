@@ -12,6 +12,7 @@ public class RangedAIScript : MonoBehaviour
     public GameObject gun;
     private float timer;
     public float shootTime=2;
+    public float shootForce = 10f;
     void start()
     {
         player = null;
@@ -47,6 +48,6 @@ public class RangedAIScript : MonoBehaviour
     void shoot()
     {
         GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
-        bullet.GetComponent<Rigidbody2D>().AddForce(firePoint.right * 20f, ForceMode2D.Impulse);
+        bullet.GetComponent<Rigidbody2D>().AddForce(firePoint.right * shootForce, ForceMode2D.Impulse);
     }
 }
