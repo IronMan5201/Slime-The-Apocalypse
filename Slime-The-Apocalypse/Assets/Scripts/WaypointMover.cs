@@ -5,14 +5,13 @@ using UnityEngine;
 public class WaypointMover : MonoBehaviour
 {
     // Start is called before the first frame update
-    enum direction {UP, UPRIGHT,RIGHT,DOWNRIGHT,DOWN,DOWNLEFT,LEFT,UPLEFT }
-    int currentWaypoint = 0;
+    enum direction { UP, UPRIGHT, RIGHT, DOWNRIGHT, DOWN, DOWNLEFT, LEFT, UPLEFT }
+    [SerializeField] int currentWaypoint = 0;
     public Transform[] waypoints = new Transform[10];
-    private Transform transform;
+    public float multiply;
     private Rigidbody2D rb;
     void Start()
     {
-        transform = gameObject.transform;
         rb = gameObject.GetComponent<Rigidbody2D>();
 
         if (waypoints[0] != null)
@@ -25,13 +24,29 @@ public class WaypointMover : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Debug.Log(currentWaypoint);
         if (!CheckDestination())
         {
+            Debug.Log(currentWaypoint+ "fcheck");
             //transform.Translate(waypoints[currentWaypoint].position, Space.Self);
-            rb.AddRelativeForce(waypoints[currentWaypoint].position);
+            Vector2 force = new Vector2(0,0);
+
+            if (transform.position.x < waypoints[currentWaypoint].position.x - 0.1)
+                force.x = 100f;
+            else if (transform.position.x > waypoints[currentWaypoint].position.x + 0.1)
+                force.x = -100f;
+
+            if (transform.position.y < waypoints[currentWaypoint].position.y - 0.1)
+                force.y = 100f;
+            else if (transform.position.y > waypoints[currentWaypoint].position.y + 0.1)
+                force.y = -100f;
+
+            force = new Vector2(force.x * Time.deltaTime , force.y * Time.deltaTime );
+            rb.velocity = force.normalized * multiply;
         }
         else
         {
+            Debug.Log(currentWaypoint + "tcheck");
             rb.velocity = new Vector2(0, 0);
             currentWaypoint = (currentWaypoint + 1) != waypoints.Length ? currentWaypoint += 1 : currentWaypoint = 0;
         }
@@ -43,7 +58,7 @@ public class WaypointMover : MonoBehaviour
         {
             if (transform.position.x <= waypoints[currentWaypoint].position.x + 0.25f)
             {
-                if (transform.position.y <= waypoints[currentWaypoint].position.y + 0.25f)
+                if (transform.position.y >= waypoints[currentWaypoint].position.y - 0.25f)
                 {
                     if (transform.position.y <= waypoints[currentWaypoint].position.y + 0.25f)
                     {
