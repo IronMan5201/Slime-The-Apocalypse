@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 764107193348366173}
   - component: {fileID: 764107193348366172}
   - component: {fileID: 764107193348366171}
+  - component: {fileID: 740020610}
   m_Layer: 0
   m_Name: Toliet
   m_TagString: Untagged
@@ -86,6 +87,24 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.33, y: 1.42}
   m_EdgeRadius: 0
+--- !u!114 &740020610
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 764107193348366170}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a3bd9b5d85694e4ab03c53325ac0256, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  winMenu: {fileID: 0}
+  UI: {fileID: 0}
+  backgroundMusic: {fileID: 0}
+  winSound: {fileID: 0}
+  menu: {fileID: 0}
+  nextLevel: 
 --- !u!1 &764107194507922714
 GameObject:
   m_ObjectHideFlags: 0
