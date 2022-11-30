@@ -6,41 +6,44 @@ using TMPro;
 
 public class LevelManager : MonoBehaviour
 {
-    public Scene Level1;
-    public Scene Level2;
-    public Scene Level3;
-    [SerializeField] private Scene currentScene;
-    [SerializeField] private bool Level1Passed = false;
-    [SerializeField] private bool Level2Passed = false;
-    [SerializeField] private bool Level3Passed = false;
+    private int Level1Passed;
+    private int Level2Passed;
+    private int Level3Passed;
+    private int Level4Passed;
+    private int Level5Passed;
+    private int Level6Passed;
+    private int Level7Passed;
+    private int Level8Passed;
 
-    public GameObject LevelSelect;
-    public GameObject Level1Button;
-    public GameObject Level2Button;
-    public GameObject Level3Button;
+    public int[] Passed;
 
     // Start is called before the first frame update
     void Start()
     {
-        Level1 = SceneManager.GetSceneByName("Level 1");
-        Level2 = SceneManager.GetSceneByName("Level 2");
-        Level3 = SceneManager.GetSceneByName("Level 3");
-        currentScene = SceneManager.GetActiveScene();
-        if(currentScene.Equals("Main Menu"))
-        {
-
-        }
-        else if(currentScene.Equals("Level Select"))
-        {
-            
-        }
-        else if(currentScene.Equals("Level 1"))
-        {
-            Level1Passed = false;
-            Level2Passed = false;
-            Level3Passed = false;
-
-        }
+        Passed = new int[8];
+        
+        Passed[0] = Level1Passed;
+        Passed[1] = Level2Passed;
+        Passed[2] = Level3Passed;
+        Passed[3] = Level4Passed;
+        Passed[4] = Level5Passed;
+        Passed[5] = Level6Passed;
+        Passed[6] = Level7Passed;
+        Passed[7] = Level8Passed;
+        //check to see what levels are passed.
+        //All passed levels have a value of 1, current level is 2, locked levels are 0
+        //The win menu will change these values
+        Level1Passed = PlayerPrefs.GetInt("Level1Passed", Level1Passed);
+        Level2Passed = PlayerPrefs.GetInt("Level2Passed", Level2Passed);
+        Level3Passed = PlayerPrefs.GetInt("Level3Passed", Level3Passed);
+        Level4Passed = PlayerPrefs.GetInt("Level4Passed", Level4Passed);
+        Level5Passed = PlayerPrefs.GetInt("Level5Passed", Level5Passed);
+        Level6Passed = PlayerPrefs.GetInt("Level6Passed", Level6Passed);
+        Level7Passed = PlayerPrefs.GetInt("Level7Passed", Level7Passed);
+        Level8Passed = PlayerPrefs.GetInt("Level8Passed", Level8Passed);
+        //Passed = 1
+        //Current = 2
+        //Locked = 0
     }
 
     // Update is called once per frame

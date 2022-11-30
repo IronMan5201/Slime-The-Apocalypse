@@ -26,6 +26,9 @@ public class MainMenu : MonoBehaviour
     public void Quit()
     {
         //When quit button is clicked, quit the game
+
+        //clears all player prefs for testing, if needed
+        //PlayerPrefs.DeleteAll();
         Application.Quit();
     }
 }
