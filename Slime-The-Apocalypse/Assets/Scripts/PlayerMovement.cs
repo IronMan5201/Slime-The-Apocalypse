@@ -66,7 +66,7 @@ public class PlayerMovement : MonoBehaviour
         switch (currentPowerUp)
         {
             case PowerUp.SHOT:
-                //SwallowShot();
+                SwallowShot();
                 break;
             case PowerUp.NONE:
                 break;
@@ -81,8 +81,8 @@ public class PlayerMovement : MonoBehaviour
         Debug.Log(collision.gameObject.tag);
         if (collision.gameObject.tag.Equals("Ground"))
         {
-            playerMoveAction.SetBool("OnGround", true);
             playerMoveAction.SetBool("Jump", false);
+            playerMoveAction.SetBool("OnGround", true);
             doubleJump = true;
             jumpOne = false;
         }
@@ -101,17 +101,23 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    /*public void SwallowShot()
+    public void SwallowShot()
     {
-        if (swallowedEnemy != null&&Input.GetButtonDown("Fire1"))
+        if (swallowedEnemy != null && Input.GetButtonDown("Fire1"))
         {
-            swallowedEnemy.transform.position=shotPoint.transform.position;
+            swallowedEnemy.transform.position = shotPoint.transform.position;
             swallowedEnemy.SetActive(true);
-            swallowedEnemy.GetComponent<Rigidbody2D>().velocity = new Vector2(shotPoint.transform.position.x*20f, 0);
-            swallowedEnemy.GetComponent<Rigidbody2D>().AddForce(shotPoint.transform.right * 20f, ForceMode2D.Impulse);
+            //swallowedEnemy.GetComponent<Rigidbody2D>().velocity = new Vector2(shotPoint.transform.position.x*5f, 0);
+            if (GetComponent<Transform>().localScale.x < 0) {
+                swallowedEnemy.GetComponent<Rigidbody2D>().AddForce(shotPoint.transform.right * -10f, ForceMode2D.Impulse);
+            }
+            else
+            {
+                swallowedEnemy.GetComponent<Rigidbody2D>().AddForce(shotPoint.transform.right * 10f, ForceMode2D.Impulse);
+            }
             swallowedEnemy = null;
         }
-    }*/
+    }
 
     public void Hover()
     {
