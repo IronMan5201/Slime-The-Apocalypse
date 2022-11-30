@@ -13,6 +13,10 @@ public class Button : MonoBehaviour
     private AudioSource buttonAudio;
     public Animator button_Animation;
     public Animator Door_Animtion;
+
+    public LayerMask enemy;
+    public LayerMask player;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -26,7 +30,11 @@ public class Button : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if (isPressed == false)
+        {
+            buttonAudio.volume = 1.0f;
+            doorAudio.volume = 0.2f;
+        }
     }
     void OnCollisionEnter2D(Collision2D collision)
     {
@@ -50,17 +58,30 @@ public class Button : MonoBehaviour
             isPressed = true;
             if (TimeLength>0)
             {
+                Debug.Log("start");
                 StartCoroutine(Waiter());
-                isPressed = false;
             }
         }
     }
 
+    
+
     IEnumerator Waiter()
     {
-
+        Debug.Log(gameObject.GetComponent<Collider2D>().IsTouchingLayers(enemy) +" "+ !gameObject.GetComponent<Collider2D>().IsTouchingLayers(player));
         yield return new WaitForSeconds(TimeLength);
-        button_Animation.SetBool("PressButton", false);
-        Door_Animtion.SetBool("IsOpen", false);
+        if (gameObject.GetComponent<Collider2D>().IsTouchingLayers(enemy) || gameObject.GetComponent<Collider2D>().IsTouchingLayers(player))
+        {
+            Debug.Log("recurse");
+            StartCoroutine(Waiter());
+        }
+        else
+        {
+            Debug.Log("else");
+            button_Animation.SetBool("PressButton", false);
+            Door_Animtion.SetBool("IsOpen", false);
+            isPressed = false;
+        }
+        Debug.Log("hit");
     }
 }

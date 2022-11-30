@@ -294,7 +294,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bcbefd4983820f4c83dd0c6c6329c28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isPressed: 0
+  TimeLength: 10
   buttonSound: {fileID: 0}
   doorSound: {fileID: 0}
   button_Animation: {fileID: -8661135910314309887}
   Door_Animtion: {fileID: 0}
+  enemy:
+    serializedVersion: 2
+    m_Bits: 1024
+  player:
+    serializedVersion: 2
+    m_Bits: 2048
