@@ -16,6 +16,7 @@ public class PlayerMovement : MonoBehaviour
     private float direction;
     [SerializeField]private bool doubleJump;
     [SerializeField] private bool jumpOne;
+    public float shotMultiplier;
 
     //Animtorcontroller of the player.
     public Animator playerMoveAction;
@@ -109,10 +110,12 @@ public class PlayerMovement : MonoBehaviour
             swallowedEnemy.SetActive(true);
             //swallowedEnemy.GetComponent<Rigidbody2D>().velocity = new Vector2(shotPoint.transform.position.x*5f, 0);
             if (GetComponent<Transform>().localScale.x < 0) {
-                swallowedEnemy.GetComponent<Rigidbody2D>().AddForce(shotPoint.transform.right * -10f, ForceMode2D.Impulse);
+                swallowedEnemy.GetComponent<Rigidbody2D>().AddForce(shotPoint.transform.up * 15f , ForceMode2D.Impulse);
+                swallowedEnemy.GetComponent<Rigidbody2D>().AddForce(shotPoint.transform.right * -10f , ForceMode2D.Impulse);
             }
             else
             {
+                swallowedEnemy.GetComponent<Rigidbody2D>().AddForce(shotPoint.transform.up * 15f , ForceMode2D.Impulse);
                 swallowedEnemy.GetComponent<Rigidbody2D>().AddForce(shotPoint.transform.right * 10f, ForceMode2D.Impulse);
             }
             swallowedEnemy = null;
