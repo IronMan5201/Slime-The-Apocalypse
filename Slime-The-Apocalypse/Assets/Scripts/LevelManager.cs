@@ -6,19 +6,19 @@ using TMPro;
 
 public class LevelManager : MonoBehaviour
 {
-    private int Level1Passed;
-    private int Level2Passed;
-    private int Level3Passed;
-    private int Level4Passed;
-    private int Level5Passed;
-    private int Level6Passed;
-    private int Level7Passed;
-    private int Level8Passed;
+    public int Level1Passed;
+    public int Level2Passed;
+    public int Level3Passed;
+    public int Level4Passed;
+    public int Level5Passed;
+    public int Level6Passed;
+    public int Level7Passed;
+    public int Level8Passed;
 
     public int[] Passed;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         Passed = new int[8];
         
@@ -49,6 +49,22 @@ public class LevelManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        PlayerPrefs.SetInt("Level1Passed", Level1Passed);
+        PlayerPrefs.SetInt("Level2Passed", Level2Passed);
+        PlayerPrefs.SetInt("Level3Passed", Level3Passed);
+        PlayerPrefs.SetInt("Level4Passed", Level4Passed);
+        PlayerPrefs.SetInt("Level5Passed", Level5Passed);
+        PlayerPrefs.SetInt("Level6Passed", Level6Passed);
+        PlayerPrefs.SetInt("Level7Passed", Level7Passed);
+        PlayerPrefs.SetInt("Level8Passed", Level8Passed);
+
+        Passed[0] = Level1Passed;
+        Passed[1] = Level2Passed;
+        Passed[2] = Level3Passed;
+        Passed[3] = Level4Passed;
+        Passed[4] = Level5Passed;
+        Passed[5] = Level6Passed;
+        Passed[6] = Level7Passed;
+        Passed[7] = Level8Passed;
     }
 }

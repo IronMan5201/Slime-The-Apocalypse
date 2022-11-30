@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class PauseMenu : MonoBehaviour
 {
@@ -13,8 +14,12 @@ public class PauseMenu : MonoBehaviour
     public GameObject backgroundMusic;
 
     public GameObject infoDisplay;
+    public TextMeshProUGUI LevelNumGUI;
 
-
+    void Awake()
+    {
+        LevelNumGUI.text = ""+ SceneManager.GetActiveScene().name + ":\nPaused";
+    }
     //Resume the game from the pause menu
     public void Resume()
     {

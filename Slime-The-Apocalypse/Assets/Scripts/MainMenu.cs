@@ -30,5 +30,6 @@ public class MainMenu : MonoBehaviour
         //clears all player prefs for testing, if needed
         //PlayerPrefs.DeleteAll();
         Application.Quit();
+        Debug.Log("GOOD BYE!");
     }
 }
