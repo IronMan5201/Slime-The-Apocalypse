@@ -6,6 +6,7 @@ using UnityEngine;
 public class Button : MonoBehaviour
 {
     public bool isPressed;
+    public bool unlimitedTime=false;
     public GameObject buttonSound;
     public GameObject doorSound;
     private AudioSource doorAudio;
@@ -47,8 +48,11 @@ public class Button : MonoBehaviour
             Door_Animtion.SetBool("IsOpen", true);
             doorAudio.Play();
             isPressed = true;
-            StartCoroutine(Waiter());
-            isPressed = false;
+            if (!unlimitedTime)
+            {
+                StartCoroutine(Waiter());
+                isPressed = false;
+            }
         }
     }
 
