@@ -9,7 +9,9 @@ public class PatrolTask : BTNode
     private Collider2D collider;
     private Transform transform;
     private Collider2D platformTracker;
+    private Collider2D wallTracker;
     public LayerMask mask;
+    public LayerMask enemy;
     public LayerMask blocker;
     public LayerMask button;
     private bool flip = false;
@@ -18,37 +20,45 @@ public class PatrolTask : BTNode
     private Vector2 lastPos;
 
     // Start is called before the first frame update
-    public PatrolTask(Collider2D collider, Rigidbody2D rigidbody, Transform transform, LayerMask mask, LayerMask button, LayerMask blocker)
+    public PatrolTask(Collider2D entitiyCollider, Rigidbody2D rigidbody, Transform transform, LayerMask mask, LayerMask button, LayerMask blocker, LayerMask enemy, Collider2D wallTracker, Collider2D platformTracker)
     {
         spottedPlayer = false;
         rb = rigidbody;
-        this.collider = collider;
+        this.collider = entitiyCollider;
         this.transform = transform;
-        platformTracker = transform.Find("Tracker").GetComponent<Collider2D>();
+        this.platformTracker = platformTracker;
         this.mask = mask;
         this.button = button;
         this.blocker = blocker;
+        this.wallTracker = wallTracker;
     }
 
     public override NodeState Evaluate()
     {
-        if (Time.time >= 1f && platformTracker.IsTouchingLayers(mask))
+        Debug.Log(" Colliders touching tiles \n platformTracker: " + platformTracker.IsTouchingLayers(mask) + "\n collider: " + collider.IsTouchingLayers(mask) + "\n WallTracker: " + wallTracker.IsTouchingLayers(mask));
+
+        if (Time.time >= 1f && collider.IsTouchingLayers(mask))
         {
             if (!spottedPlayer)
             {
                 Debug.Log("Patrol Not Spotted");
                 rb.velocity = new Vector2((flip ? -1 : 1) * /*speed*/ 500f * Time.deltaTime, rb.velocity.y);
-                Debug.Log("TEST");
-                Debug.Log("plat: " + platformTracker.IsTouchingLayers(mask));
-
+                
                 if (collider.IsTouchingLayers(button))
                     rb.velocity = new Vector2(rb.velocity.x, 250f * Time.deltaTime);
 
-                if ((!platformTracker.IsTouchingLayers(mask) && collider.IsTouchingLayers(mask)) || platformTracker.IsTouchingLayers(blocker))
+                if ( (!platformTracker.IsTouchingLayers(mask) && collider.IsTouchingLayers(mask)) || platformTracker.IsTouchingLayers(blocker))
                 {
                     flip = !flip;
                     transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
-                    Debug.Log("Hit");
+                    Debug.Log("Edge");
+                }
+
+                if (wallTracker.IsTouchingLayers(mask) || wallTracker.IsTouchingLayers(enemy) || wallTracker.IsTouchingLayers(blocker))
+                {
+                    flip = !flip;
+                    transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
+                    Debug.Log("Hit Wall");
                 }
             }
             else
