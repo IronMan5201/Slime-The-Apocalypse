@@ -6,7 +6,7 @@ using UnityEngine;
 public class Button : MonoBehaviour
 {
     public bool isPressed;
-    public bool unlimitedTime=false;
+    public float TimeLength=10f; //Set to <= 0 if you want the timer to be unlimited
     public GameObject buttonSound;
     public GameObject doorSound;
     private AudioSource doorAudio;
@@ -48,7 +48,7 @@ public class Button : MonoBehaviour
             Door_Animtion.SetBool("IsOpen", true);
             doorAudio.Play();
             isPressed = true;
-            if (!unlimitedTime)
+            if (TimeLength>0)
             {
                 StartCoroutine(Waiter());
                 isPressed = false;
@@ -59,7 +59,7 @@ public class Button : MonoBehaviour
     IEnumerator Waiter()
     {
 
-        yield return new WaitForSeconds(10);
+        yield return new WaitForSeconds(TimeLength);
         button_Animation.SetBool("PressButton", false);
         Door_Animtion.SetBool("IsOpen", false);
     }
