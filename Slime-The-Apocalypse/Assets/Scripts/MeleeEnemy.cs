@@ -9,6 +9,10 @@ public class MeleeEnemy : MonoBehaviour
 
     void Start()
     {
+        if(MeleeKilledSound == null)
+        {
+            MeleeKilledSound = GameObject.Find("MeleeKilledSound");
+        }
         meleeKilledAudio = MeleeKilledSound.GetComponent<AudioSource>();
     }
     void OnCollisionEnter2D(Collision2D collision)
