@@ -12,6 +12,8 @@ public class PlayerMovement : MonoBehaviour
     public GameObject shotPoint;
     public GameObject jumpSound;
     private AudioSource jumpAudio;
+    public GameObject TookDamageSound;
+    private AudioSource tookDamageAudio;
     private Rigidbody2D rb;
     private float direction;
     [SerializeField]private bool doubleJump;
@@ -27,6 +29,7 @@ public class PlayerMovement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         jumpAudio = jumpSound.GetComponent<AudioSource>();
+        tookDamageAudio = TookDamageSound.GetComponent<AudioSource>();
         swallowedEnemy = null;
     }
 
@@ -146,6 +149,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (!invulnerable)
         {
+            tookDamageAudio.Play();
             health -= amount;
             StartCoroutine(Invulnerablity());
         }

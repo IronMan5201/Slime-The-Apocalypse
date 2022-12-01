@@ -2755,6 +2755,15 @@ MonoBehaviour:
   Level6Passed: 0
   Level7Passed: 0
   Level8Passed: 0
+  Level1Time: 2000
+  Level2Time: 2000
+  Level3Time: 2000
+  Level4Time: 2000
+  Level5Time: 2000
+  Level6Time: 2000
+  Level7Time: 2000
+  Level8Time: 2000
+  BestTimes: []
   Passed: 
 --- !u!4 &1954889609
 Transform:

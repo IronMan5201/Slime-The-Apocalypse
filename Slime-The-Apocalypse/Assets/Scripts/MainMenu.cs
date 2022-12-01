@@ -40,6 +40,15 @@ public class MainMenu : MonoBehaviour
         manager.Level6Passed = 0;
         manager.Level7Passed = 0;
         manager.Level8Passed = 0;
+
+        manager.Level1Time = 2000.0f;
+        manager.Level2Time = 2000.0f;
+        manager.Level3Time = 2000.0f;
+        manager.Level4Time = 2000.0f;
+        manager.Level5Time = 2000.0f;
+        manager.Level6Time = 2000.0f;
+        manager.Level7Time = 2000.0f;
+        manager.Level8Time = 2000.0f;
         //****
         Application.Quit();
         Debug.Log("GOOD BYE!");

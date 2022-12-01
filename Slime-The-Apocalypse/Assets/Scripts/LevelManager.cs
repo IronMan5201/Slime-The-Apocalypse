@@ -14,6 +14,15 @@ public class LevelManager : MonoBehaviour
     public int Level6Passed;
     public int Level7Passed;
     public int Level8Passed;
+    public float Level1Time = 2000.0f;
+    public float Level2Time = 2000.0f;
+    public float Level3Time = 2000.0f;
+    public float Level4Time = 2000.0f;
+    public float Level5Time = 2000.0f;
+    public float Level6Time = 2000.0f;
+    public float Level7Time = 2000.0f;
+    public float Level8Time = 2000.0f;
+    public float[] BestTimes;
 
     public int[] Passed;
 
@@ -21,6 +30,7 @@ public class LevelManager : MonoBehaviour
     void Awake()
     {
         Passed = new int[8];
+        BestTimes = new float[8];
         
         Passed[0] = Level1Passed;
         Passed[1] = Level2Passed;
@@ -30,6 +40,17 @@ public class LevelManager : MonoBehaviour
         Passed[5] = Level6Passed;
         Passed[6] = Level7Passed;
         Passed[7] = Level8Passed;
+        
+        /*
+        BestTimes[0] = Level1Time;
+        BestTimes[1] = Level2Time;
+        BestTimes[2] = Level3Time;
+        BestTimes[3] = Level4Time;
+        BestTimes[4] = Level5Time;
+        BestTimes[5] = Level6Time;
+        BestTimes[6] = Level7Time;
+        BestTimes[7] = Level8Time;
+        */
         //check to see what levels are passed.
         //All passed levels have a value of 1, current level is 2, locked levels are 0
         //The win menu will change these values
@@ -44,10 +65,48 @@ public class LevelManager : MonoBehaviour
         //Passed = 1
         //Current = 2
         //Locked = 0
+
+        /*
+        PlayerPrefs.SetFloat("Level1Time", Level1Time);
+        PlayerPrefs.SetFloat("Level2Time", Level2Time);
+        PlayerPrefs.SetFloat("Level3Time", Level3Time);
+        PlayerPrefs.SetFloat("Level4Time", Level4Time);
+        PlayerPrefs.SetFloat("Level5Time", Level5Time);
+        PlayerPrefs.SetFloat("Level6Time", Level6Time);
+        PlayerPrefs.SetFloat("Level7Time", Level7Time);
+        PlayerPrefs.SetFloat("Level8Time", Level8Time);
+        */
+
+        Level1Time = PlayerPrefs.GetFloat("Level1Time", Level1Time);
+        Level2Time = PlayerPrefs.GetFloat("Level2Time", Level2Time);
+        Level3Time = PlayerPrefs.GetFloat("Level3Time", Level3Time);
+        Level4Time = PlayerPrefs.GetFloat("Level4Time", Level4Time);
+        Level5Time = PlayerPrefs.GetFloat("Level5Time", Level5Time);
+        Level6Time = PlayerPrefs.GetFloat("Level6Time", Level6Time);
+        Level7Time = PlayerPrefs.GetFloat("Level7Time", Level7Time);
+        Level8Time = PlayerPrefs.GetFloat("Level8Time", Level8Time);
+
+        
+        PlayerPrefs.SetFloat("Level1Time", Level1Time);
+        PlayerPrefs.SetFloat("Level2Time", Level2Time);
+        PlayerPrefs.SetFloat("Level3Time", Level3Time);
+        PlayerPrefs.SetFloat("Level4Time", Level4Time);
+        PlayerPrefs.SetFloat("Level5Time", Level5Time);
+        PlayerPrefs.SetFloat("Level6Time", Level6Time);
+        PlayerPrefs.SetFloat("Level7Time", Level7Time);
+        PlayerPrefs.SetFloat("Level8Time", Level8Time);
+        
     }
 
     // Update is called once per frame
     void Update()
+    {
+        UpdateOpenLevels();
+
+        UpdateBestTimes();
+    }
+
+    public void UpdateOpenLevels()
     {
         PlayerPrefs.SetInt("Level1Passed", Level1Passed);
         PlayerPrefs.SetInt("Level2Passed", Level2Passed);
@@ -66,5 +125,49 @@ public class LevelManager : MonoBehaviour
         Passed[5] = Level6Passed;
         Passed[6] = Level7Passed;
         Passed[7] = Level8Passed;
+    }
+
+    public void UpdateBestTimes()
+    {
+        if(Level1Time < PlayerPrefs.GetFloat("Level1Time", Level1Time))
+        {
+            PlayerPrefs.SetFloat("Level1Time", Level1Time);
+            BestTimes[0] = Level1Time;
+        }
+        if(Level2Time < PlayerPrefs.GetFloat("Level2Time", Level2Time))
+        {
+            PlayerPrefs.SetFloat("Level2Time", Level2Time);
+            BestTimes[1] = Level2Time;
+        }
+        if(Level3Time < PlayerPrefs.GetFloat("Level3Time", Level3Time))
+        {
+            PlayerPrefs.SetFloat("Level3Time", Level3Time);
+            BestTimes[2] = Level3Time;
+        }
+        if(Level4Time < PlayerPrefs.GetFloat("Level1Time", Level1Time))
+        {
+            PlayerPrefs.SetFloat("Level4Time", Level4Time);
+            BestTimes[3] = Level4Time;
+        }
+        if(Level5Time < PlayerPrefs.GetFloat("Level1Time", Level1Time))
+        {
+            PlayerPrefs.SetFloat("Level5Time", Level5Time);
+            BestTimes[4] = Level5Time;
+        }
+        if(Level6Time < PlayerPrefs.GetFloat("Level1Time", Level1Time))
+        {
+            PlayerPrefs.SetFloat("Level6Time", Level6Time);
+            BestTimes[5] = Level6Time;
+        }
+        if(Level7Time < PlayerPrefs.GetFloat("Level1Time", Level1Time))
+        {
+            PlayerPrefs.SetFloat("Level7Time", Level7Time);
+            BestTimes[6] = Level7Time;
+        }
+        if(Level8Time < PlayerPrefs.GetFloat("Level1Time", Level1Time))
+        {
+            PlayerPrefs.SetFloat("Level8Time", Level8Time);
+            BestTimes[7] = Level8Time;
+        }
     }
 }

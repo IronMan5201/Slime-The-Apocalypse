@@ -4,6 +4,13 @@ using UnityEngine;
 
 public class MeleeEnemy : MonoBehaviour
 {
+    public GameObject MeleeKilledSound;
+    private AudioSource meleeKilledAudio;
+
+    void Start()
+    {
+        meleeKilledAudio = MeleeKilledSound.GetComponent<AudioSource>();
+    }
     void OnCollisionEnter2D(Collision2D collision)
     {
 
@@ -14,6 +21,7 @@ public class MeleeEnemy : MonoBehaviour
             {
                 player.GetComponent<PlayerMovement>().swallowedEnemy = gameObject;
                 gameObject.SetActive(false);
+                meleeKilledAudio.Play();
             }
             else
             {

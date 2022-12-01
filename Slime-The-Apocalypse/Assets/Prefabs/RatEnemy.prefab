@@ -203,6 +203,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35217fff1185f68449619b2314f3b4cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MeleeKilledSound: {fileID: 0}
 --- !u!114 &1769025254935369865
 MonoBehaviour:
   m_ObjectHideFlags: 0

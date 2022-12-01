@@ -13,6 +13,7 @@ public class ToiletScript : MonoBehaviour
     public string nextLevel;
     //private string currentScene;
     public LevelManager manager;
+    public LevelTime time;
     void Start()
     {
         //currentScene = SceneManager.GetActiveScene();
@@ -82,34 +83,50 @@ public class ToiletScript : MonoBehaviour
         if(scene.Equals("Level 1"))
         {
             manager.Level1Passed = 1;
+            if(manager.Level1Time > time.currentTime)
+                manager.Level1Time = time.currentTime;
         }
         else if(scene.Equals("Level 2"))
         {
             manager.Level2Passed = 1;
+            if(manager.Level2Time > time.currentTime)
+                manager.Level2Time = time.currentTime;
         }
         else if(scene.Equals("Level 3"))
         {
             manager.Level3Passed = 1;
+            if(manager.Level3Time > time.currentTime)
+                manager.Level3Time = time.currentTime;
         }
         else if(scene.Equals("Level 4"))
         {
             manager.Level4Passed = 1;
+            if(manager.Level4Time > time.currentTime)
+                manager.Level4Time = time.currentTime;
         }
         else if(scene.Equals("Level 5"))
         {
             manager.Level5Passed = 1;
+            if(manager.Level5Time > time.currentTime)
+                manager.Level5Time = time.currentTime;
         }
         else if(scene.Equals("Level 6"))
         {
             manager.Level6Passed = 1;
+            if(manager.Level6Time > time.currentTime)
+                manager.Level6Time = time.currentTime;
         }
         else if(scene.Equals("Level 7"))
         {
             manager.Level7Passed = 1;
+            if(manager.Level7Time > time.currentTime)
+                manager.Level7Time = time.currentTime;
         }
         else if(scene.Equals("Level 8"))
         {
             manager.Level8Passed = 1;
+            if(manager.Level8Time > time.currentTime)
+                manager.Level8Time = time.currentTime;
         }
     }
 }
