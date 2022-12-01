@@ -22,6 +22,10 @@ public class AbilityUI : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if(player == null)
+        {
+            player = GameObject.Find("Player");
+        }
         powerUp = player.GetComponent<PlayerMovement>().currentPowerUp;
         abilityGUI.text = "Ability:\nNone";
     }

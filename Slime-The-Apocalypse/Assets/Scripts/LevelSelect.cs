@@ -15,21 +15,21 @@ public class LevelSelect : MonoBehaviour
     public GameObject Level6Button;
     public GameObject Level7Button;
     public GameObject Level8Button;
-    public TextMeshProUGUI Level1BestTime;
-    public TextMeshProUGUI Level2BestTime;
-    public TextMeshProUGUI Level3BestTime;
-    public TextMeshProUGUI Level4BestTime;
-    public TextMeshProUGUI Level5BestTime;
-    public TextMeshProUGUI Level6BestTime;
-    public TextMeshProUGUI Level7BestTime;
-    public TextMeshProUGUI Level8BestTime;
+    public GameObject Level1BestTime;
+    public GameObject Level2BestTime;
+    public GameObject Level3BestTime;
+    public GameObject Level4BestTime;
+    public GameObject Level5BestTime;
+    public GameObject Level6BestTime;
+    public GameObject Level7BestTime;
+    public GameObject Level8BestTime;
     private GameObject[] Buttons;
-    private TextMeshProUGUI[] Times;
+    private GameObject[] Times;
     // Start is called before the first frame update
     void Start()
     { 
         Buttons = new GameObject[8];
-        Times = new TextMeshProUGUI[8];
+        Times = new GameObject[8];
         Buttons[0] = Level1Button;
         Buttons[1] = Level2Button;
         Buttons[2] = Level3Button;
@@ -65,6 +65,7 @@ public class LevelSelect : MonoBehaviour
                     break;
                 case 2:
                     Buttons[i].SetActive(true);
+                    Times[i].SetActive(false);
                     break;
             }
         }
@@ -78,13 +79,13 @@ public class LevelSelect : MonoBehaviour
         }
 
         //update best time gui
-        Times[0].text = "Best Time- " + System.TimeSpan.FromSeconds(manager.Level1Time).ToString("mm':'ss");
-        Times[1].text = "Best Time- " + System.TimeSpan.FromSeconds(manager.Level2Time).ToString("mm':'ss");
-        Times[2].text = "Best Time- " + System.TimeSpan.FromSeconds(manager.Level3Time).ToString("mm':'ss");
-        Times[3].text = "Best Time- " + System.TimeSpan.FromSeconds(manager.Level4Time).ToString("mm':'ss");
-        Times[4].text = "Best Time- " + System.TimeSpan.FromSeconds(manager.Level5Time).ToString("mm':'ss");
-        Times[5].text = "Best Time- " + System.TimeSpan.FromSeconds(manager.Level6Time).ToString("mm':'ss");
-        Times[6].text = "Best Time- " + System.TimeSpan.FromSeconds(manager.Level7Time).ToString("mm':'ss");
-        Times[7].text = "Best Time- " + System.TimeSpan.FromSeconds(manager.Level8Time).ToString("mm':'ss");
+        Times[0].GetComponent<TextMeshProUGUI>().text = "Best Time- " + System.TimeSpan.FromSeconds(manager.Level1Time).ToString("mm':'ss");
+        Times[1].GetComponent<TextMeshProUGUI>().text = "Best Time- " + System.TimeSpan.FromSeconds(manager.Level2Time).ToString("mm':'ss");
+        Times[2].GetComponent<TextMeshProUGUI>().text = "Best Time- " + System.TimeSpan.FromSeconds(manager.Level3Time).ToString("mm':'ss");
+        Times[3].GetComponent<TextMeshProUGUI>().text = "Best Time- " + System.TimeSpan.FromSeconds(manager.Level4Time).ToString("mm':'ss");
+        Times[4].GetComponent<TextMeshProUGUI>().text = "Best Time- " + System.TimeSpan.FromSeconds(manager.Level5Time).ToString("mm':'ss");
+        Times[5].GetComponent<TextMeshProUGUI>().text = "Best Time- " + System.TimeSpan.FromSeconds(manager.Level6Time).ToString("mm':'ss");
+        Times[6].GetComponent<TextMeshProUGUI>().text = "Best Time- " + System.TimeSpan.FromSeconds(manager.Level7Time).ToString("mm':'ss");
+        Times[7].GetComponent<TextMeshProUGUI>().text = "Best Time- " + System.TimeSpan.FromSeconds(manager.Level8Time).ToString("mm':'ss");
     }
 }

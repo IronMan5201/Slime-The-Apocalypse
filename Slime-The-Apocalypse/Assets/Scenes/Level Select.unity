@@ -1196,14 +1196,14 @@ MonoBehaviour:
   Level6Button: {fileID: 529142868}
   Level7Button: {fileID: 779035434}
   Level8Button: {fileID: 1409201017}
-  Level1BestTime: {fileID: 1086284027}
-  Level2BestTime: {fileID: 1429944875}
-  Level3BestTime: {fileID: 707426286}
-  Level4BestTime: {fileID: 1830171169}
-  Level5BestTime: {fileID: 1162177474}
-  Level6BestTime: {fileID: 56596008}
-  Level7BestTime: {fileID: 1180705636}
-  Level8BestTime: {fileID: 994988071}
+  Level1BestTime: {fileID: 1086284025}
+  Level2BestTime: {fileID: 1429944873}
+  Level3BestTime: {fileID: 707426284}
+  Level4BestTime: {fileID: 1830171167}
+  Level5BestTime: {fileID: 1162177472}
+  Level6BestTime: {fileID: 56596006}
+  Level7BestTime: {fileID: 1180705634}
+  Level8BestTime: {fileID: 994988069}
 --- !u!1 &441867037
 GameObject:
   m_ObjectHideFlags: 0
