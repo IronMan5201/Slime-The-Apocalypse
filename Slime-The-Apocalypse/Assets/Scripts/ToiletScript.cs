@@ -16,6 +16,11 @@ public class ToiletScript : MonoBehaviour
     public LevelTime time;
     void Start()
     {
+        if(winSound == null)
+        {
+            winSound = GameObject.Find("WinSound");
+        }
+
         //currentScene = SceneManager.GetActiveScene();
         winMenu.SetActive(false);
         UI.SetActive(true);

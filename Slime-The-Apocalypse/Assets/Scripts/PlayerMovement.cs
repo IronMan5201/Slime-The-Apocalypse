@@ -27,6 +27,14 @@ public class PlayerMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if(jumpSound == null)
+        {
+            jumpSound = GameObject.Find("JumpSound");
+        }
+        if(TookDamageSound == null)
+        {
+            TookDamageSound = GameObject.Find("TookDamageSound");
+        }
         rb = GetComponent<Rigidbody2D>();
         jumpAudio = jumpSound.GetComponent<AudioSource>();
         tookDamageAudio = TookDamageSound.GetComponent<AudioSource>();

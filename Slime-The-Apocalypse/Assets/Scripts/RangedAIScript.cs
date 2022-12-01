@@ -16,6 +16,11 @@ public class RangedAIScript : MonoBehaviour
     void start()
     {
         player = null;
+        if(ShotAudio == null)
+        {
+            ShotAudio = GameObject.Find("RangedShotSound");
+        }
+
         if(shotSound == null)
             shotSound = ShotAudio.GetComponent<AudioSource>();
     }

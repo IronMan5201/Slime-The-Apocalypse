@@ -19,6 +19,14 @@ public class HealthScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if(Died == null)
+        {
+            Died = FindObjectOfType<PauseMenu>();
+        }
+        if(Player == null)
+        {
+            Player = GameObject.Find("Player");
+        }
         Heart1.sprite = HeartFull;
         Heart2.sprite = HeartFull;
         Heart3.sprite = HeartFull;

@@ -10,6 +10,10 @@ public class Deathpit : MonoBehaviour
 
     void Start()
     {
+        if(Died == null)
+        {
+            Died = GameObject.FindObjectOfType<PauseMenu>();
+        }
         objectDied = false;
     }
     void OnCollisionEnter2D(Collision2D collision)

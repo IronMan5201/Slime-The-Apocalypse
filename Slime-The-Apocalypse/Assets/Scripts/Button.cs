@@ -22,6 +22,14 @@ public class Button : MonoBehaviour
     {
         button_Animation.SetBool("PressButton", false);
         Door_Animtion.SetBool("IsOpen", false);
+        if(buttonSound == null)
+        {
+            buttonSound = GameObject.Find("ButtonSound");
+        }
+        if(doorSound == null)
+        {
+            doorSound = GameObject.Find("DoorSound");
+        }
         buttonAudio = buttonSound.GetComponent<AudioSource>();
         doorAudio = doorSound.GetComponent<AudioSource>();
         isPressed = false;

@@ -18,6 +18,10 @@ public class LevelTime : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if(menu == null)
+        {
+            menu = FindObjectOfType<PauseMenu>();
+        }
         currentTime = 0.0f;
         currentTimeGUI = 0;
         timeGUI.text = "Time-" + currentTimeGUI.ToString();
