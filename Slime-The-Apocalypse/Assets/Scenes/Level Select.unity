@@ -1648,6 +1648,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad889e7fc1f1ce042bd96d08ae344551, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Level1Passed: 0
+  Level2Passed: 0
+  Level3Passed: 0
+  Level4Passed: 0
+  Level5Passed: 0
+  Level6Passed: 0
+  Level7Passed: 0
+  Level8Passed: 0
   Passed: 
 --- !u!4 &596695848
 Transform:
@@ -3244,6 +3252,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82c1f09c65e421d4fae27a332e4e4859, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  manager: {fileID: 596695847}
 --- !u!1 &1973494979
 GameObject:
   m_ObjectHideFlags: 0

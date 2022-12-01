@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
+    public LevelManager manager;
     public void PlayGame(string sceneName)
     {
         //When play button is clicked on main menu, it loads scene of first level
@@ -28,7 +29,18 @@ public class MainMenu : MonoBehaviour
         //When quit button is clicked, quit the game
 
         //clears all player prefs for testing, if needed
-        //PlayerPrefs.DeleteAll();
+        //Needed if want to start over after quit
+        //****
+        PlayerPrefs.DeleteAll();
+        manager.Level1Passed = 0;
+        manager.Level2Passed = 0;
+        manager.Level3Passed = 0;
+        manager.Level4Passed = 0;
+        manager.Level5Passed = 0;
+        manager.Level6Passed = 0;
+        manager.Level7Passed = 0;
+        manager.Level8Passed = 0;
+        //****
         Application.Quit();
         Debug.Log("GOOD BYE!");
     }
