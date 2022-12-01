@@ -17,7 +17,7 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D rb;
     private float direction;
     [SerializeField]private bool doubleJump;
-    [SerializeField] private bool jumpOne;
+    public bool jumpOne;
     public float shotMultiplier;
 
     //Animtorcontroller of the player.
@@ -83,6 +83,7 @@ public class PlayerMovement : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         Debug.Log(collision.gameObject.tag);
+ 
         if (collision.gameObject.tag.Equals("Ground"))
         {
             playerMoveAction.SetBool("Jump", false);
