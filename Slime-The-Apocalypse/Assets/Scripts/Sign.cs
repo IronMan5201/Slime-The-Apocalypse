@@ -8,6 +8,14 @@ public class Sign : MonoBehaviour
 
     public GameObject powerUpSound;
 
+    void Start()
+    {
+        if(powerUpSound == null)
+        {
+            powerUpSound = GameObject.Find("PowerUpSound");
+        }
+    }
+
     private void OnCollisionStay2D(Collision2D collision)
     {
         Debug.Log("triggered");

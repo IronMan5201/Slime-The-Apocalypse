@@ -20,6 +20,29 @@ public class ToiletScript : MonoBehaviour
         {
             winSound = GameObject.Find("WinSound");
         }
+        if(winMenu == null)
+        {
+            winMenu = GameObject.Find("WinCanvas");
+        }
+        if(UI == null)
+        {
+            UI = GameObject.Find("Info");
+        }
+        if(menu == null)
+        {
+            GameObject temp = GameObject.Find("PauseCanvas");
+            menu = temp.GetComponent<PauseMenu>();
+        }
+        if(manager == null)
+        {
+            GameObject temp = GameObject.Find("LevelManager");
+            manager = temp.GetComponent<LevelManager>();
+        }
+        if(time == null)
+        {
+            GameObject temp = GameObject.Find("PlayCanvas");
+            time = temp.GetComponent<LevelTime>();
+        }
 
         //currentScene = SceneManager.GetActiveScene();
         winMenu.SetActive(false);

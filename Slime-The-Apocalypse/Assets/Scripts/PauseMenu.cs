@@ -21,7 +21,7 @@ public class PauseMenu : MonoBehaviour
     {
         if(LevelNum == null)
         {
-            LevelNum = GameObject.Find("Time");
+            LevelNum = GameObject.Find("LevelInfo");
             LevelNumGUI = LevelNum.GetComponent<TextMeshProUGUI>();
         }
         LevelNumGUI.text = ""+ SceneManager.GetActiveScene().name + ":\nPaused";
