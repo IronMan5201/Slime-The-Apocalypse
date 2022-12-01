@@ -15,7 +15,7 @@ public class EnemyBullet : MonoBehaviour
             Debug.Log("Player was hit!");
             Destroy(gameObject);
         }
-        else if(other.gameObject.tag == "Ground")
+        else
         {
             Destroy(gameObject);
         }
