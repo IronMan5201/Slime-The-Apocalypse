@@ -14,10 +14,16 @@ public class PauseMenu : MonoBehaviour
     public GameObject backgroundMusic;
 
     public GameObject infoDisplay;
-    public TextMeshProUGUI LevelNumGUI;
+    public GameObject LevelNum;
+    private TextMeshProUGUI LevelNumGUI;
 
     void Awake()
     {
+        if(LevelNum == null)
+        {
+            LevelNum = GameObject.Find("Time");
+            LevelNumGUI = LevelNum.GetComponent<TextMeshProUGUI>();
+        }
         LevelNumGUI.text = ""+ SceneManager.GetActiveScene().name + ":\nPaused";
     }
     //Resume the game from the pause menu
