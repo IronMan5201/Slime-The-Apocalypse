@@ -24,7 +24,7 @@ public class MeleeBT : BehaviorTree.Tree
             PlatformTracker = gameObject.transform.Find("Tracker").GetComponent<Collider2D>();
 
         if (gameObject.transform.GetChild(0).GetComponent<Collider2D>() != null)
-            temp2DC = transform.GetChild(0).GetComponent<Collider2D>();
+            temp2DC = transform.GetComponent<Collider2D>();
 
         if (gameObject.GetComponent<Rigidbody2D>() != null)
             rig2D = gameObject.GetComponent<Rigidbody2D>();

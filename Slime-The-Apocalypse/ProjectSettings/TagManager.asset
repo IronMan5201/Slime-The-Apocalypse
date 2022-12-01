@@ -14,16 +14,16 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Enemy
   - Water
   - UI
   - Entities
   - Obstacles
   - Ground
   - Blocker
-  - Enemy
-  - Player
   - 
+  - Player
+  - Why
   - 
   - 
   - 

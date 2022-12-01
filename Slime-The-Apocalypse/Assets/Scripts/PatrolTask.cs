@@ -31,11 +31,18 @@ public class PatrolTask : BTNode
         this.button = button;
         this.blocker = blocker;
         this.wallTracker = wallTracker;
+        this.enemy = enemy;
     }
 
     public override NodeState Evaluate()
     {
-        Debug.Log(" Colliders touching tiles \n platformTracker: " + platformTracker.IsTouchingLayers(mask) + "\n collider: " + collider.IsTouchingLayers(mask) + "\n WallTracker: " + wallTracker.IsTouchingLayers(mask));
+        Debug.Log(" Colliders touching tiles \n platformTracker: " + platformTracker.IsTouchingLayers(mask) 
+            + "\n collider: " + collider.IsTouchingLayers(mask) 
+            + "\n WallTracker: " + wallTracker.IsTouchingLayers(mask) 
+            +/*"\n Time:" + Time.time +*/"\n WallEnemy"+ wallTracker.IsTouchingLayers(enemy) 
+            + "\n ColidEnemy" + collider.IsTouchingLayers(enemy)
+            + "\n ColidEnt" + collider.IsTouchingLayers(button)
+            + "\n ColidBlocker" + collider.IsTouchingLayers(blocker));
 
         if (Time.time >= 1f && collider.IsTouchingLayers(mask))
         {

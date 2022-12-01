@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 234151408}
   - component: {fileID: 234151409}
-  m_Layer: 10
+  m_Layer: 3
   m_Name: Wall Tracker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -68,7 +68,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1769025254055924056}
   - component: {fileID: 1769025254055924059}
-  m_Layer: 10
+  m_Layer: 3
   m_Name: Tracker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -119,7 +119,7 @@ GameObject:
   - component: {fileID: 1769025254935369864}
   - component: {fileID: 1769025254935369866}
   - component: {fileID: 1769025254935369865}
-  m_Layer: 10
+  m_Layer: 3
   m_Name: RatEnemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -221,7 +221,7 @@ MonoBehaviour:
     m_Bits: 128
   enemy:
     serializedVersion: 2
-    m_Bits: 1024
+    m_Bits: 1032
   blocker:
     serializedVersion: 2
     m_Bits: 512
@@ -240,7 +240,7 @@ GameObject:
   - component: {fileID: 1769025255352132883}
   - component: {fileID: 1769025255352132882}
   - component: {fileID: 1769025255352132847}
-  m_Layer: 10
+  m_Layer: 3
   m_Name: Rat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
