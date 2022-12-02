@@ -20,7 +20,14 @@ public class Button : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        if(buttonSound == null)
+        {
+            buttonSound = GameObject.Find("ButtonSound");
+        }
+        if(doorSound == null)
+        {
+            doorSound = GameObject.Find("DoorSound");
+        }
         button_Animation.SetBool("PressButton", false);
         Door_Animtion.SetBool("IsOpen", false);
         buttonAudio = buttonSound.GetComponent<AudioSource>();
