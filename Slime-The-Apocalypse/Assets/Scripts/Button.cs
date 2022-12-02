@@ -62,7 +62,7 @@ public class Button : MonoBehaviour
             buttonAudio.Play();
             button_Animation.SetBool("PressButton", true);
             Door_Animtion.SetBool("IsOpen", true);
-            doorAudio.Play();
+            //doorAudio.Play();
             isPressed = true;
             if (TimeLength>0)
             {
