@@ -19,10 +19,19 @@ public class PauseMenu : MonoBehaviour
 
     void Awake()
     {
-        if(LevelNum == null)
+        Debug.Log("Hello world");
+        if (LevelNum == null)
         {
-            LevelNum = GameObject.Find("LevelInfo");
+            LevelNum = GameObject.Find("Canvas'").transform.Find("PauseCanvas").transform.Find("Image").transform.Find("LevelInfo").gameObject;
+            Debug.Log("NUM: " + LevelNum == null ? "null" : "something");
             LevelNumGUI = LevelNum.GetComponent<TextMeshProUGUI>();
+            Debug.Log("GUI: " + LevelNumGUI == null ? "null" : "something");
+        }
+        else
+        {
+            LevelNumGUI = LevelNum.GetComponent<TextMeshProUGUI>();
+            Debug.Log("NUM: " + LevelNum == null ? "null" : "something");
+            Debug.Log("GUI: " + LevelNumGUI == null ? "null" : "something");
         }
         LevelNumGUI.text = ""+ SceneManager.GetActiveScene().name + ":\nPaused";
     }

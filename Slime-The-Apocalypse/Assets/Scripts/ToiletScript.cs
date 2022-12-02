@@ -88,6 +88,7 @@ public class ToiletScript : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
+            
             UI.SetActive(false);
             winMenu.SetActive(true);
             Time.timeScale = 0f;
@@ -95,6 +96,7 @@ public class ToiletScript : MonoBehaviour
             winSound.GetComponent<AudioSource>().Play();
             backgroundMusic.GetComponent<AudioSource>().volume -= 0.9f;
             LevelComplete(SceneManager.GetActiveScene().name);
+            Debug.Log("Toilet Success");
         }
     }
     public void NextLevel()
