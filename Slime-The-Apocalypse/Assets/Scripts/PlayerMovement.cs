@@ -138,7 +138,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (Input.GetButton("Jump") && rb.velocity.y < 0)
         {
-            rb.AddForce(new Vector2(rb.velocity.x, 1.25f));
+            rb.AddForce(new Vector2(rb.velocity.x, 1.5f));
         }
     }
 
