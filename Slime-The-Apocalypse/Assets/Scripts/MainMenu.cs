@@ -27,10 +27,13 @@ public class MainMenu : MonoBehaviour
     public void Quit()
     {
         //When quit button is clicked, quit the game
+        Application.Quit();
+        Debug.Log("GOOD BYE!");
+    }
 
-        //clears all player prefs for testing, if needed
-        //Needed if want to start over after quit
-        //****
+    public void ResetProgress()
+    {
+        //reset progress
         PlayerPrefs.DeleteAll();
         manager.Level1Passed = 0;
         manager.Level2Passed = 0;
@@ -49,8 +52,5 @@ public class MainMenu : MonoBehaviour
         manager.Level6Time = 2000.0f;
         manager.Level7Time = 2000.0f;
         manager.Level8Time = 2000.0f;
-        //****
-        Application.Quit();
-        Debug.Log("GOOD BYE!");
     }
 }
