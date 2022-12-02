@@ -47,6 +47,10 @@ public class ToiletScript : MonoBehaviour
         //currentScene = SceneManager.GetActiveScene();
         winMenu.SetActive(false);
         UI.SetActive(true);
+        if( SceneManager.GetActiveScene() == SceneManager.GetSceneByName("Game Complete"))
+        {
+            UI.SetActive(false);
+        }
         Time.timeScale = 1f;
         menu.SetPause(false);
         Debug.Log("****"+SceneManager.GetActiveScene().name);

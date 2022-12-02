@@ -26,7 +26,7 @@ public class BurnedScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(died.objectDied == true)
+        if(died != null && died.objectDied == true)
         {
             burnedAudio.Play();
         }
