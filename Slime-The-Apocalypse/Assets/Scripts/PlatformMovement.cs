@@ -71,9 +71,14 @@ public class PlatformMovement : MonoBehaviour
     }
     private void OnCollisionStay2D(Collision2D collision)
     {
-        if (!collision.gameObject.GetComponent<PlayerMovement>().jumpOne)
+        if (collision.gameObject.GetComponent<PlayerMovement>() != null)
         {
-            collision.transform.position= new Vector2(collision.transform.position.x, transform.position.y+1.45f);
+            if (!collision.gameObject.GetComponent<PlayerMovement>().jumpOne)
+            {
+
+                collision.transform.position = new Vector2(collision.transform.position.x, transform.position.y + 1.45f);
+
+            }
         }
     }
     /*private void OnCollisionExit2D(Collision2D collision)
