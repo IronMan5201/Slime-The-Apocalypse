@@ -22,7 +22,7 @@ public class ToiletScript : MonoBehaviour
         }
         if(winMenu == null)
         {
-            winMenu = GameObject.Find("WinCanvas");
+            winMenu = GameObject.Find("WinCanvas").transform.Find("WinMenu").gameObject;
         }
         if(UI == null)
         {
